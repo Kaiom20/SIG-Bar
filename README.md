@@ -9,6 +9,6 @@ Projeto de um Sistema de Gestão para um Bar e Restaurante
 -> Professor: Flavius da Luz e Gorgônio \
 -> Caicó/RN 
 
--> Em desenvolvimento por: \
-&emsp- Kaio Márcio Araújo Cavalcante Lira \
-&emsp- Fillipe Medeiros Araújo Morais 
+-> Em desenvolvimento por: 
+  - Kaio Márcio Araújo Cavalcante Lira 
+  - Fillipe Medeiros Araújo Morais 
