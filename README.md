@@ -10,5 +10,5 @@ Projeto de um Sistema de Gestão para um Bar e Restaurante
 -> Caicó/RN 
 
 -> Em desenvolvimento por: \
-    - Kaio Márcio Araújo Cavalcante Lira \
-    - Fillipe Medeiros Araújo Morais 
+&emsp- Kaio Márcio Araújo Cavalcante Lira \
+&emsp- Fillipe Medeiros Araújo Morais 
