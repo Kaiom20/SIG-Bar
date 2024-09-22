@@ -54,6 +54,7 @@ void menu_principal(void) {
     printf("\n");
 }
 
+
 void menu_comandas(void) {
     printf("\n");
     printf("|==================================================================|\n");
@@ -64,6 +65,23 @@ void menu_comandas(void) {
     printf("|==========|           [2] Exibir Comanda               |==========|\n");
     printf("|==========|           [3] Alterar Comanda              |==========|\n");
     printf("|==========|           [4] Excluir Comanda              |==========|\n");
+    printf("|==========|           [0] Retornar ao Menu Principal   |==========|\n");
+    printf("|==========|                                            |==========|\n");
+    printf("|==================================================================|\n");
+    printf("\n");
+}
+
+
+void menu_estoque(void) {
+    printf("\n");
+    printf("|==================================================================|\n");
+    printf("|===============|            Menu Estoque          |===============|\n");
+    printf("|==================================================================|\n");
+    printf("|==========|                                            |==========|\n");
+    printf("|==========|           [1] Cadastrar Produto            |==========|\n");
+    printf("|==========|           [2] Exibir Produto               |==========|\n");
+    printf("|==========|           [3] Alterar Produto              |==========|\n");
+    printf("|==========|           [4] Excluir Produto              |==========|\n");
     printf("|==========|           [0] Retornar ao Menu Principal   |==========|\n");
     printf("|==========|                                            |==========|\n");
     printf("|==================================================================|\n");
