@@ -10,3 +10,16 @@
 |=============================================================|
 */
 
+#include <stdio.h>
+
+
+// Assinatura das funções
+void menu_principal(void);
+void menu_comandas(void);
+void menu_estoque(void);
+void menu_garcons(void);
+void menu_relatorios(void);
+void menu_info(void);
+
+
+
