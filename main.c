@@ -2,18 +2,18 @@
 |=============================================================|
 |=================|     Projeto SIG-Bar     |=================|
 |=============================================================|
-|=====|   Sistema de GestÃ£o para um Bar e Restaurante   |=====|
-|=====|          Sistemas de InformaÃ§Ã£o / UFRN          |=====|
-|=====|                  ProgramaÃ§Ã£o                    |=====|
-|=====|      Alunos: Kaio MÃ¡rcio e Fillipe Medeiros     |=====|
-|=====|                   VersÃ£o 0.1                    |=====|
+|=====|   Sistema de Gestão para um Bar e Restaurante   |=====|
+|=====|          Sistemas de Informação / UFRN          |=====|
+|=====|                  Programação                    |=====|
+|=====|      Alunos: Kaio Márcio e Fillipe Medeiros     |=====|
+|=====|                   Versão 0.1                    |=====|
 |=============================================================|
 */
 
 #include <stdio.h>
+#include <locale.h>
 
-
-// Assinatura das funÃ§Ãµes
+// Assinatura das funções
 void menu_principal(void);
 void menu_comandas(void);
 void menu_estoque(void);
@@ -24,6 +24,7 @@ void menu_info(void);
 
 // Programa Principal
 int main(void) {
+    setlocale(LC_ALL, "Portuguese");
     menu_principal();
     menu_comandas();
     menu_estoque();
@@ -34,7 +35,7 @@ int main(void) {
 }
 
 
-// FunÃ§Ãµes 
+// Funções 
 
 void menu_principal(void) {
     printf("\n");
@@ -42,11 +43,11 @@ void menu_principal(void) {
     printf("|===============|        Menu Principal        |===============|\n");
     printf("|==============================================================|\n");
     printf("|==========|                                        |==========|\n");
-    printf("|==========|           [1] MÃ³dulo Comandas          |==========|\n");
-    printf("|==========|           [2] MÃ³dulo Estoque           |==========|\n");
-    printf("|==========|           [3] MÃ³dulo GarÃ§ons           |==========|\n");
-    printf("|==========|           [4] MÃ³dulo RelatÃ³rios        |==========|\n");
-    printf("|==========|           [5] MÃ³dulo InformaÃ§Ãµes       |==========|\n");
+    printf("|==========|           [1] Módulo Comandas          |==========|\n");
+    printf("|==========|           [2] Módulo Estoque           |==========|\n");
+    printf("|==========|           [3] Módulo Garçons           |==========|\n");
+    printf("|==========|           [4] Módulo Relatórios        |==========|\n");
+    printf("|==========|           [5] Módulo Informações       |==========|\n");
     printf("|==========|           [0] Sair                     |==========|\n");
     printf("|==========|                                        |==========|\n");
     printf("|==============================================================|\n");
