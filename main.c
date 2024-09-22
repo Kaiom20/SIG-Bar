@@ -17,7 +17,7 @@
 void menu_principal(void);
 void menu_comandas(void);
 void menu_estoque(void);
-void menu_garcons(void);
+void menu_garcom(void);
 void menu_relatorios(void);
 void menu_info(void);
 
@@ -28,7 +28,7 @@ int main(void) {
     menu_principal();
     menu_comandas();
     menu_estoque();
-    menu_garcons();
+    menu_garcom();
     menu_relatorios();
     menu_info();
     return 0;
@@ -43,11 +43,11 @@ void menu_principal(void) {
     printf("|===============|        Menu Principal        |===============|\n");
     printf("|==============================================================|\n");
     printf("|==========|                                        |==========|\n");
-    printf("|==========|           [1] Módulo Comandas          |==========|\n");
-    printf("|==========|           [2] Módulo Estoque           |==========|\n");
-    printf("|==========|           [3] Módulo Garçons           |==========|\n");
-    printf("|==========|           [4] Módulo Relatórios        |==========|\n");
-    printf("|==========|           [5] Módulo Informações       |==========|\n");
+    printf("|==========|           [1] Menu Comandas            |==========|\n");
+    printf("|==========|           [2] Menu Estoque             |==========|\n");
+    printf("|==========|           [3] Menu Garçom              |==========|\n");
+    printf("|==========|           [4] Menu Relatórios          |==========|\n");
+    printf("|==========|           [5] Menu Informações         |==========|\n");
     printf("|==========|           [0] Sair                     |==========|\n");
     printf("|==========|                                        |==========|\n");
     printf("|==============================================================|\n");
@@ -82,6 +82,23 @@ void menu_estoque(void) {
     printf("|==========|           [2] Exibir Produto               |==========|\n");
     printf("|==========|           [3] Alterar Produto              |==========|\n");
     printf("|==========|           [4] Excluir Produto              |==========|\n");
+    printf("|==========|           [0] Retornar ao Menu Principal   |==========|\n");
+    printf("|==========|                                            |==========|\n");
+    printf("|==================================================================|\n");
+    printf("\n");
+}
+
+
+void menu_garcom(void) {
+    printf("\n");
+    printf("|==================================================================|\n");
+    printf("|===============|            Menu Garçom           |===============|\n");
+    printf("|==================================================================|\n");
+    printf("|==========|                                            |==========|\n");
+    printf("|==========|           [1] Cadastrar Garçom             |==========|\n");
+    printf("|==========|           [2] Exibir Garçom                |==========|\n");
+    printf("|==========|           [3] Alterar Garçom               |==========|\n");
+    printf("|==========|           [4] Excluir Garçom               |==========|\n");
     printf("|==========|           [0] Retornar ao Menu Principal   |==========|\n");
     printf("|==========|                                            |==========|\n");
     printf("|==================================================================|\n");
