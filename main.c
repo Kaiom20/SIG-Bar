@@ -19,7 +19,7 @@ void menu_comandas(void);
 void menu_estoque(void);
 void menu_garcom(void);
 void menu_relatorios(void);
-void menu_info(void);
+void info(void);
 
 
 // Programa Principal
@@ -30,7 +30,7 @@ int main(void) {
     menu_estoque();
     menu_garcom();
     menu_relatorios();
-    menu_info();
+    info();
     return 0;
 }
 
@@ -47,7 +47,7 @@ void menu_principal(void) {
     printf("|==========|           [2] Menu Estoque             |==========|\n");
     printf("|==========|           [3] Menu Garçom              |==========|\n");
     printf("|==========|           [4] Menu Relatórios          |==========|\n");
-    printf("|==========|           [5] Menu Informações         |==========|\n");
+    printf("|==========|           [5] Informações              |==========|\n");
     printf("|==========|           [0] Sair                     |==========|\n");
     printf("|==========|                                        |==========|\n");
     printf("|==============================================================|\n");
@@ -118,5 +118,34 @@ void menu_relatorios(void) {
     printf("|==========|           [0] Retornar ao Menu Principal   |==========|\n");
     printf("|==========|                                            |==========|\n");
     printf("|==================================================================|\n");
+    printf("\n");
+}
+
+
+void info(void) {
+    printf("\n");
+    printf("|========================================================================================|\n");
+    printf("|==================|                    Informações                   |==================|\n");
+    printf("|========================================================================================|\n");
+    printf("|==========|                                                                  |==========|\n");
+    printf("|==========|     Projeto de um Sistema de Gestão para um Bar e Restaurante    |==========|\n");
+    printf("|==========|                 Sistemas de Informação / UFRN                    |==========|\n");
+    printf("|==========|                 Disciplina: Programação                          |==========|\n");
+    printf("|==========|                 Professor: Flavius da Luz e Gorgônio             |==========|\n");
+    printf("|==========|                                                                  |==========|\n");
+    printf("|==========|        Projeto em desenvolvimento por:                           |==========|\n");
+    printf("|==========|                                                                  |==========|\n");
+    printf("|==========|                 Kaio Márcio Aaraújo Cavalcante Lira              |==========|\n");
+    printf("|==========|                 E-mail: kaio.lira.080@ufrn.edu.br                |==========|\n");
+    printf("|==========|                 Instagram: @kaiom.20                             |==========|\n");
+    printf("|==========|                 Git: https://github.com/Kaiom20                  |==========|\n");
+    printf("|==========|                                                                  |==========|\n");
+    printf("|==========|                 Fillipe Medeiros Araújo Morais                   |==========|\n");
+    printf("|==========|                 E-mail: fillipe.morais.095@ufrn.edu.br           |==========|\n");
+    printf("|==========|                 Instagram: @fillipemdrs                          |==========|\n");
+    printf("|==========|                 Git: https://github.com/fillipemdrs              |==========|\n");
+    printf("|==========|                                                                  |==========|\n");
+    printf("|==========|                                          -- desde Set, 2024      |==========|\n");
+    printf("|========================================================================================|\n");
     printf("\n");
 }
