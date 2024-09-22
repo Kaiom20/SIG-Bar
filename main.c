@@ -22,4 +22,15 @@ void menu_relatorios(void);
 void menu_info(void);
 
 
+// Programa Principal
+int main(void) {
+    menu_principal();
+    menu_comandas();
+    menu_estoque();
+    menu_garcons();
+    menu_relatorios();
+    menu_info();
+    return 0;
+}
+
 
