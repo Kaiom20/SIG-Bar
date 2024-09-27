@@ -16,9 +16,25 @@
 // Assinatura das funções
 void menu_principal(void);
 void menu_comandas(void);
+void cadastrar_comanda(void);
+void exibir_comanda(void);
+void alterar_comanda(void);
+void excluir_comanda(void);
 void menu_estoque(void);
+
+
+
+
 void menu_garcom(void);
+
+
+
+
+
 void menu_relatorios(void);
+
+
+
 void info(void);
 
 
