@@ -11,6 +11,7 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <locale.h>
 
 // Assinatura das funções
@@ -43,9 +44,24 @@ int main(void) {
     setlocale(LC_ALL, "Portuguese");
     menu_principal();
     menu_comandas();
+    cadastrar_comanda();
+    exibir_comanda();
+    alterar_comanda();
+    excluir_comanda();
     menu_estoque();
+
+
+
+
     menu_garcom();
+
+
+
+
     menu_relatorios();
+
+
+
     info();
     return 0;
 }
@@ -54,19 +70,20 @@ int main(void) {
 // Funções 
 
 void menu_principal(void) {
+    system("clear||cls");
     printf("\n");
-    printf("|==============================================================|\n");
-    printf("|===============|        Menu Principal        |===============|\n");
-    printf("|==============================================================|\n");
-    printf("|==========|                                        |==========|\n");
-    printf("|==========|           [1] Menu Comandas            |==========|\n");
-    printf("|==========|           [2] Menu Estoque             |==========|\n");
-    printf("|==========|           [3] Menu Garçom              |==========|\n");
-    printf("|==========|           [4] Menu Relatórios          |==========|\n");
-    printf("|==========|           [5] Informações              |==========|\n");
-    printf("|==========|           [0] Sair                     |==========|\n");
-    printf("|==========|                                        |==========|\n");
-    printf("|==============================================================|\n");
+    printf("|==================================================================|\n");
+    printf("|===============|          Menu Principal          |===============|\n");
+    printf("|==================================================================|\n");
+    printf("|==========|                                            |==========|\n");
+    printf("|==========|             [1] Menu Comandas              |==========|\n");
+    printf("|==========|             [2] Menu Estoque               |==========|\n");
+    printf("|==========|             [3] Menu Garçom                |==========|\n");
+    printf("|==========|             [4] Menu Relatórios            |==========|\n");
+    printf("|==========|             [5] Informações                |==========|\n");
+    printf("|==========|             [0] Sair                       |==========|\n");
+    printf("|==========|                                            |==========|\n");
+    printf("|==================================================================|\n");
     printf("\n");
 }
 
@@ -85,6 +102,39 @@ void menu_comandas(void) {
     printf("|==========|                                            |==========|\n");
     printf("|==================================================================|\n");
     printf("\n");
+}
+
+
+void cadastrar_comanda(void) {
+    printf("\n");
+    printf("|==================================================================|\n");
+    printf("|===============|         Cadastrar Comanda        |===============|\n");
+    printf("|==================================================================|\n");
+    printf("|==========|                                            |==========|\n");
+    printf("|==========|          ID da Comanda:                    |==========|\n");
+    printf("|==========|          Data:                             |==========|\n");
+    printf("|==========|          Hora:                             |==========|\n");
+    printf("|==========|          Mesa:                             |==========|\n");
+    printf("|==========|          ID do Garçom:                     |==========|\n");
+    printf("|==========|          Valor:                            |==========|\n");
+    printf("|==========|                                            |==========|\n");
+    printf("|==================================================================|\n");
+    printf("\n");
+}
+
+
+void exibir_comanda(void) {
+    
+}
+
+    
+void alterar_comanda(void) {
+
+}
+
+
+void excluir_comanda(void) {
+
 }
 
 
