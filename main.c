@@ -281,7 +281,7 @@ void info(void) {
     printf("|==========|                                                                  |==========|\n");
     printf("|==========|        Projeto em desenvolvimento por:                           |==========|\n");
     printf("|==========|                                                                  |==========|\n");
-    printf("|==========|                 Kaio Márcio Aaraújo Cavalcante Lira              |==========|\n");
+    printf("|==========|                 Kaio Márcio Araújo Cavalcante Lira               |==========|\n");
     printf("|==========|                 E-mail: kaio.lira.080@ufrn.edu.br                |==========|\n");
     printf("|==========|                 Instagram: @kaiom.20                             |==========|\n");
     printf("|==========|                 Git: https://github.com/Kaiom20                  |==========|\n");
