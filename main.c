@@ -27,11 +27,10 @@ void exibir_produto(void);
 void alterar_produto(void);
 void excluir_produto(void);
 void menu_garcom(void);
-
-
-
-
-
+void cadastrar_garcom(void);
+void exibir_garcom(void);
+void alterar_garcom(void);
+void excluir_garcom(void);
 void menu_relatorios(void);
 
 
@@ -54,10 +53,10 @@ int main(void) {
     alterar_produto();
     excluir_produto();
     menu_garcom();
-
-
-
-
+    cadastrar_garcom();
+    exibir_garcom();
+    alterar_garcom();
+    excluir_garcom();
     menu_relatorios();
 
 
@@ -246,6 +245,23 @@ void menu_garcom(void) {
     printf("|==========|           [3] Alterar Garçom               |==========|\n");
     printf("|==========|           [4] Excluir Garçom               |==========|\n");
     printf("|==========|           [0] Retornar ao Menu Principal   |==========|\n");
+    printf("|==========|                                            |==========|\n");
+    printf("|==================================================================|\n");
+    printf("\n");
+}
+
+
+void cadastrar_garcom(void) {
+    printf("\n");
+    printf("|==================================================================|\n");
+    printf("|===============|        Cadastrar Garçom          |===============|\n");
+    printf("|==================================================================|\n");
+    printf("|==========|                                            |==========|\n");
+    printf("|==========|          Nome:                             |==========|\n");
+    printf("|==========|          Idade:                            |==========|\n");
+    printf("|==========|          CPF:                              |==========|\n");
+    printf("|==========|          Telefone:                         |==========|\n");
+    printf("|==========|          ID do Garçom:                     |==========|\n");
     printf("|==========|                                            |==========|\n");
     printf("|==================================================================|\n");
     printf("\n");
