@@ -195,10 +195,18 @@ void cadastrar_produto(void) {
     printf("\n");
 }
 void exibir_produto(void){
-
+    printf("\n");
+    printf("|==================================================================|\n");
+    printf("|===============|          Exibir Produto          |===============|\n");
+    printf("|==================================================================|\n");
+    printf("|==========|                                            |==========|\n");
+    printf("|==========|          ID do Produto:                    |==========|\n");
+    printf("|==========|                                            |==========|\n");
+    printf("|==================================================================|\n");
+    printf("\n");
 }
 void alterar_produto(void){
-
+    
 }
 void excluir_produto(void){
 
