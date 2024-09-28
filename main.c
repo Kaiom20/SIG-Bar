@@ -22,10 +22,10 @@ void exibir_comanda(void);
 void alterar_comanda(void);
 void excluir_comanda(void);
 void menu_estoque(void);
-void cadastrar_item(void);
-void exibir_item(void);
-void alterar_item(void);
-void excluir_item(void);
+void cadastrar_produto(void);
+void exibir_produto(void);
+void alterar_produto(void);
+void excluir_produto(void);
 void menu_garcom(void);
 
 
@@ -49,10 +49,10 @@ int main(void) {
     alterar_comanda();
     excluir_comanda();
     menu_estoque();
-    cadastrar_item();
-    exibir_item();
-    alterar_item();
-    excluir_item();
+    cadastrar_produto();
+    exibir_produto();
+    alterar_produto();
+    excluir_produto();
     menu_garcom();
 
 
@@ -178,6 +178,31 @@ void menu_estoque(void) {
     printf("\n");
 }
 
+
+void cadastrar_produto(void) {
+    printf("\n");
+    printf("|==================================================================|\n");
+    printf("|===============|        Cadastrar Produto         |===============|\n");
+    printf("|==================================================================|\n");
+    printf("|==========|                                            |==========|\n");
+    printf("|==========|          ID do item:                       |==========|\n");
+    printf("|==========|          Nome:                             |==========|\n");
+    printf("|==========|          Validade:                         |==========|\n");
+    printf("|==========|          Quantidade:                       |==========|\n");
+    printf("|==========|          Valor:                            |==========|\n");
+    printf("|==========|                                            |==========|\n");
+    printf("|==================================================================|\n");
+    printf("\n");
+}
+void exibir_produto(void){
+
+}
+void alterar_produto(void){
+
+}
+void excluir_produto(void){
+
+}
 
 void menu_garcom(void) {
     printf("\n");
