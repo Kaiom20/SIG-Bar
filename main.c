@@ -194,7 +194,9 @@ void cadastrar_produto(void) {
     printf("|==================================================================|\n");
     printf("\n");
 }
-void exibir_produto(void){
+
+
+void exibir_produto(void) {
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Exibir Produto          |===============|\n");
@@ -205,12 +207,25 @@ void exibir_produto(void){
     printf("|==================================================================|\n");
     printf("\n");
 }
-void alterar_produto(void){
-    
+
+
+void alterar_produto(void) {
+    printf("\n");
+    printf("|==================================================================|\n");
+    printf("|===============|          Alterar Produto         |===============|\n");
+    printf("|==================================================================|\n");
+    printf("|==========|                                            |==========|\n");
+    printf("|==========|          ID do Produto:                    |==========|\n");
+    printf("|==========|                                            |==========|\n");
+    printf("|==================================================================|\n");
+    printf("\n");
 }
-void excluir_produto(void){
+
+
+void excluir_produto(void) {
 
 }
+
 
 void menu_garcom(void) {
     printf("\n");
