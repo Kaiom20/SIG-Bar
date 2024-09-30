@@ -6,7 +6,7 @@
 |=====|          Sistemas de Informação / UFRN          |=====|
 |=====|                  Programação                    |=====|
 |=====|      Alunos: Kaio Márcio e Fillipe Medeiros     |=====|
-|=====|                   Versão 0.1                    |=====|
+|=====|                   Versão 0.2                    |=====|
 |=============================================================|
 */
 
