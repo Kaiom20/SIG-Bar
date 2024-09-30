@@ -2,11 +2,11 @@
 |=============================================================|
 |=================|     Projeto SIG-Bar     |=================|
 |=============================================================|
-|=====|   Sistema de Gestão para um Bar e Restaurante   |=====|
-|=====|          Sistemas de Informação / UFRN          |=====|
-|=====|                  Programação                    |=====|
-|=====|      Alunos: Kaio Márcio e Fillipe Medeiros     |=====|
-|=====|                   Versão 0.1                    |=====|
+|=====|   Sistema de GestÃ£o para um Bar e Restaurante   |=====|
+|=====|          Sistemas de InformaÃ§Ã£o / UFRN          |=====|
+|=====|                  ProgramaÃ§Ã£o                    |=====|
+|=====|      Alunos: Kaio MÃ¡rcio e Fillipe Medeiros     |=====|
+|=====|                   VersÃ£o 0.1                    |=====|
 |=============================================================|
 */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <locale.h>
 
-// Assinatura das funções
+// Assinatura das funÃ§Ãµes
 void menu_principal(void);
 void menu_comandas(void);
 void cadastrar_comanda(void);
@@ -40,7 +40,7 @@ void info(void);
 
 // Programa Principal
 int main(void) {
-    setlocale(LC_ALL, "Portuguese");
+    setlocale(LC_ALL, "Portuguese_Brazil");
     menu_principal();
     menu_comandas();
     cadastrar_comanda();
@@ -66,7 +66,7 @@ int main(void) {
 }
 
 
-// Funções 
+// FunÃ§Ãµes 
 
 void menu_principal(void) {
     system("clear||cls");
@@ -77,9 +77,9 @@ void menu_principal(void) {
     printf("|==========|                                            |==========|\n");
     printf("|==========|             [1] Menu Comandas              |==========|\n");
     printf("|==========|             [2] Menu Estoque               |==========|\n");
-    printf("|==========|             [3] Menu Garçom                |==========|\n");
-    printf("|==========|             [4] Menu Relatórios            |==========|\n");
-    printf("|==========|             [5] Informações                |==========|\n");
+    printf("|==========|             [3] Menu GarÃ§om                |==========|\n");
+    printf("|==========|             [4] Menu RelatÃ³rios            |==========|\n");
+    printf("|==========|             [5] InformaÃ§Ãµes                |==========|\n");
     printf("|==========|             [0] Sair                       |==========|\n");
     printf("|==========|                                            |==========|\n");
     printf("|==================================================================|\n");
@@ -114,7 +114,7 @@ void cadastrar_comanda(void) {
     printf("|==========|          Data:                             |==========|\n");
     printf("|==========|          Hora:                             |==========|\n");
     printf("|==========|          Mesa:                             |==========|\n");
-    printf("|==========|          ID do Garçom:                     |==========|\n");
+    printf("|==========|          ID do GarÃ§om:                     |==========|\n");
     printf("|==========|          Valor:                            |==========|\n");
     printf("|==========|                                            |==========|\n");
     printf("|==================================================================|\n");
@@ -237,13 +237,13 @@ void excluir_produto(void) {
 void menu_garcom(void) {
     printf("\n");
     printf("|==================================================================|\n");
-    printf("|===============|            Menu Garçom           |===============|\n");
+    printf("|===============|            Menu GarÃ§om           |===============|\n");
     printf("|==================================================================|\n");
     printf("|==========|                                            |==========|\n");
-    printf("|==========|           [1] Cadastrar Garçom             |==========|\n");
-    printf("|==========|           [2] Exibir Garçom                |==========|\n");
-    printf("|==========|           [3] Alterar Garçom               |==========|\n");
-    printf("|==========|           [4] Excluir Garçom               |==========|\n");
+    printf("|==========|           [1] Cadastrar GarÃ§om             |==========|\n");
+    printf("|==========|           [2] Exibir GarÃ§om                |==========|\n");
+    printf("|==========|           [3] Alterar GarÃ§om               |==========|\n");
+    printf("|==========|           [4] Excluir GarÃ§om               |==========|\n");
     printf("|==========|           [0] Retornar ao Menu Principal   |==========|\n");
     printf("|==========|                                            |==========|\n");
     printf("|==================================================================|\n");
@@ -254,14 +254,14 @@ void menu_garcom(void) {
 void cadastrar_garcom(void) {
     printf("\n");
     printf("|==================================================================|\n");
-    printf("|===============|        Cadastrar Garçom          |===============|\n");
+    printf("|===============|        Cadastrar GarÃ§om          |===============|\n");
     printf("|==================================================================|\n");
     printf("|==========|                                            |==========|\n");
     printf("|==========|          Nome:                             |==========|\n");
     printf("|==========|          Idade:                            |==========|\n");
     printf("|==========|          CPF:                              |==========|\n");
     printf("|==========|          Telefone:                         |==========|\n");
-    printf("|==========|          ID do Garçom:                     |==========|\n");
+    printf("|==========|          ID do GarÃ§om:                     |==========|\n");
     printf("|==========|                                            |==========|\n");
     printf("|==================================================================|\n");
     printf("\n");
@@ -271,10 +271,10 @@ void cadastrar_garcom(void) {
 void exibir_garcom(void) {
     printf("\n");
     printf("|==================================================================|\n");
-    printf("|===============|          Exibir Garçom           |===============|\n");
+    printf("|===============|          Exibir GarÃ§om           |===============|\n");
     printf("|==================================================================|\n");
     printf("|==========|                                            |==========|\n");
-    printf("|==========|          ID do Garçom:                     |==========|\n");
+    printf("|==========|          ID do GarÃ§om:                     |==========|\n");
     printf("|==========|                                            |==========|\n");
     printf("|==================================================================|\n");
     printf("\n");
@@ -284,10 +284,10 @@ void exibir_garcom(void) {
 void alterar_garcom(void) {
     printf("\n");
     printf("|==================================================================|\n");
-    printf("|===============|          Alterar Garçom          |===============|\n");
+    printf("|===============|          Alterar GarÃ§om          |===============|\n");
     printf("|==================================================================|\n");
     printf("|==========|                                            |==========|\n");
-    printf("|==========|          ID do Garçom:                     |==========|\n");
+    printf("|==========|          ID do GarÃ§om:                     |==========|\n");
     printf("|==========|                                            |==========|\n");
     printf("|==================================================================|\n");
     printf("\n");
@@ -297,10 +297,10 @@ void alterar_garcom(void) {
 void excluir_garcom(void) {
     printf("\n");
     printf("|==================================================================|\n");
-    printf("|===============|          Excluir Garçom          |===============|\n");
+    printf("|===============|          Excluir GarÃ§om          |===============|\n");
     printf("|==================================================================|\n");
     printf("|==========|                                            |==========|\n");
-    printf("|==========|          ID do Garçom:                     |==========|\n");
+    printf("|==========|          ID do GarÃ§om:                     |==========|\n");
     printf("|==========|                                            |==========|\n");
     printf("|==================================================================|\n");
     printf("\n");
@@ -310,12 +310,12 @@ void excluir_garcom(void) {
 void menu_relatorios(void) {
     printf("\n");
     printf("|==================================================================|\n");
-    printf("|===============|          Menu Relatórios         |===============|\n");
+    printf("|===============|          Menu RelatÃ³rios         |===============|\n");
     printf("|==================================================================|\n");
     printf("|==========|                                            |==========|\n");
-    printf("|==========|           [1] Relatório Comandas           |==========|\n");
-    printf("|==========|           [2] Relatório Estoque            |==========|\n");
-    printf("|==========|           [3] Relatório Garçom             |==========|\n");
+    printf("|==========|           [1] RelatÃ³rio Comandas           |==========|\n");
+    printf("|==========|           [2] RelatÃ³rio Estoque            |==========|\n");
+    printf("|==========|           [3] RelatÃ³rio GarÃ§om             |==========|\n");
     printf("|==========|           [0] Retornar ao Menu Principal   |==========|\n");
     printf("|==========|                                            |==========|\n");
     printf("|==================================================================|\n");
@@ -326,22 +326,22 @@ void menu_relatorios(void) {
 void info(void) {
     printf("\n");
     printf("|========================================================================================|\n");
-    printf("|==================|                    Informações                   |==================|\n");
+    printf("|==================|                    InformaÃ§Ãµes                   |==================|\n");
     printf("|========================================================================================|\n");
     printf("|==========|                                                                  |==========|\n");
-    printf("|==========|     Projeto de um Sistema de Gestão para um Bar e Restaurante    |==========|\n");
-    printf("|==========|                 Sistemas de Informação / UFRN                    |==========|\n");
-    printf("|==========|                 Disciplina: Programação                          |==========|\n");
-    printf("|==========|                 Professor: Flavius da Luz e Gorgônio             |==========|\n");
+    printf("|==========|     Projeto de um Sistema de GestÃ£o para um Bar e Restaurante    |==========|\n");
+    printf("|==========|                 Sistemas de InformaÃ§Ã£o / UFRN                    |==========|\n");
+    printf("|==========|                 Disciplina: ProgramaÃ§Ã£o                          |==========|\n");
+    printf("|==========|                 Professor: Flavius da Luz e GorgÃ´nio             |==========|\n");
     printf("|==========|                                                                  |==========|\n");
     printf("|==========|        Projeto em desenvolvimento por:                           |==========|\n");
     printf("|==========|                                                                  |==========|\n");
-    printf("|==========|                 Kaio Márcio Araújo Cavalcante Lira               |==========|\n");
+    printf("|==========|                 Kaio MÃ¡rcio AraÃºjo Cavalcante Lira               |==========|\n");
     printf("|==========|                 E-mail: kaio.lira.080@ufrn.edu.br                |==========|\n");
     printf("|==========|                 Instagram: @kaiom.20                             |==========|\n");
     printf("|==========|                 Git: https://github.com/Kaiom20                  |==========|\n");
     printf("|==========|                                                                  |==========|\n");
-    printf("|==========|                 Fillipe Medeiros Araújo Morais                   |==========|\n");
+    printf("|==========|                 Fillipe Medeiros AraÃºjo Morais                   |==========|\n");
     printf("|==========|                 E-mail: fillipe.morais.095@ufrn.edu.br           |==========|\n");
     printf("|==========|                 Instagram: @fillipemdrs                          |==========|\n");
     printf("|==========|                 Git: https://github.com/fillipemdrs              |==========|\n");
