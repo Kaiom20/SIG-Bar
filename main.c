@@ -84,6 +84,8 @@ void menu_principal(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -102,6 +104,8 @@ void menu_comandas(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -121,6 +125,8 @@ void cadastrar_comanda(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -135,6 +141,8 @@ void exibir_comanda(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -149,6 +157,8 @@ void alterar_comanda(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -163,6 +173,8 @@ void excluir_comanda(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -181,6 +193,8 @@ void menu_estoque(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -199,6 +213,8 @@ void cadastrar_produto(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -213,6 +229,8 @@ void exibir_produto(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -227,6 +245,8 @@ void alterar_produto(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -241,6 +261,8 @@ void excluir_produto(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -259,6 +281,8 @@ void menu_garcom(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -277,6 +301,8 @@ void cadastrar_garcom(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -291,6 +317,8 @@ void exibir_garcom(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -305,6 +333,8 @@ void alterar_garcom(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -319,6 +349,8 @@ void excluir_garcom(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -336,6 +368,8 @@ void menu_relatorios(void) {
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
 
 
@@ -366,4 +400,6 @@ void info(void) {
     printf("|=====|                                               -- desde Set, 2024           |=====|\n");
     printf("|========================================================================================|\n");
     printf("\n");
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
 }
