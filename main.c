@@ -31,7 +31,7 @@ void cadastrar_garcom(void);
 void exibir_garcom(void);
 void alterar_garcom(void);
 void excluir_garcom(void);
-void menu_relatorios(void);
+char menu_relatorios(void);
 
 
 
@@ -60,7 +60,7 @@ int main(void) {
     exibir_garcom();
     alterar_garcom();
     excluir_garcom();
-    menu_relatorios();
+    opcao = menu_relatorios();
 
 
 
@@ -72,6 +72,7 @@ int main(void) {
 // Funções 
 
 char menu_principal(void) {
+    char opc;
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
@@ -86,6 +87,10 @@ char menu_principal(void) {
     printf("|=====|                  [0] Sair                            |=====|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
+    printf("|=====| Escolha uma opção: ");
+    scanf("%c", &opc);
+    getchar();
+    printf("|==================================================================|\n");
     printf("\n");
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
     getchar();
@@ -93,6 +98,7 @@ char menu_principal(void) {
 
 
 char menu_comandas(void) {
+    char opc;
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
@@ -105,6 +111,10 @@ char menu_comandas(void) {
     printf("|=====|                [4] Excluir Comanda                   |=====|\n");
     printf("|=====|                [0] Retornar ao Menu Principal        |=====|\n");
     printf("|=====|                                                      |=====|\n");
+    printf("|==================================================================|\n");
+    printf("|=====| Escolha uma opção: ");
+    scanf("%c", &opc);
+    getchar();
     printf("|==================================================================|\n");
     printf("\n");
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
@@ -182,6 +192,7 @@ void excluir_comanda(void) {
 
 
 char menu_estoque(void) {
+    char opc;
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
@@ -194,6 +205,10 @@ char menu_estoque(void) {
     printf("|=====|                [4] Excluir Produto                   |=====|\n");
     printf("|=====|                [0] Retornar ao Menu Principal        |=====|\n");
     printf("|=====|                                                      |=====|\n");
+    printf("|==================================================================|\n");
+    printf("|=====| Escolha uma opção: ");
+    scanf("%c", &opc);
+    getchar();
     printf("|==================================================================|\n");
     printf("\n");
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
@@ -270,6 +285,7 @@ void excluir_produto(void) {
 
 
 char menu_garcom(void) {
+    char opc;
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
@@ -282,6 +298,10 @@ char menu_garcom(void) {
     printf("|=====|                [4] Excluir Garçom                    |=====|\n");
     printf("|=====|                [0] Retornar ao Menu Principal        |=====|\n");
     printf("|=====|                                                      |=====|\n");
+    printf("|==================================================================|\n");
+    printf("|=====| Escolha uma opção: ");
+    scanf("%c", &opc);
+    getchar();
     printf("|==================================================================|\n");
     printf("\n");
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
@@ -357,7 +377,8 @@ void excluir_garcom(void) {
 }
 
 
-void menu_relatorios(void) {
+char menu_relatorios(void) {
+    char opc;
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
@@ -369,6 +390,10 @@ void menu_relatorios(void) {
     printf("|=====|                [3] Relatório Garçom                  |=====|\n");
     printf("|=====|                [0] Retornar ao Menu Principal        |=====|\n");
     printf("|=====|                                                      |=====|\n");
+    printf("|==================================================================|\n");
+    printf("|=====| Escolha uma opção: ");
+    scanf("%c", &opc);
+    getchar();
     printf("|==================================================================|\n");
     printf("\n");
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
