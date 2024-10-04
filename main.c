@@ -15,18 +15,18 @@
 #include <locale.h>
 
 // Assinatura das funções
-void menu_principal(void);
-void menu_comandas(void);
+char menu_principal(void);
+char menu_comandas(void);
 void cadastrar_comanda(void);
 void exibir_comanda(void);
 void alterar_comanda(void);
 void excluir_comanda(void);
-void menu_estoque(void);
+char menu_estoque(void);
 void cadastrar_produto(void);
 void exibir_produto(void);
 void alterar_produto(void);
 void excluir_produto(void);
-void menu_garcom(void);
+char menu_garcom(void);
 void cadastrar_garcom(void);
 void exibir_garcom(void);
 void alterar_garcom(void);
@@ -41,18 +41,21 @@ void info(void);
 // Programa Principal
 int main(void) {
     setlocale(LC_ALL, "Portuguese_Brazil");
-    menu_principal();
-    menu_comandas();
+    
+    char opcao;
+
+    opcao = menu_principal();
+    opcao = menu_comandas();
     cadastrar_comanda();
     exibir_comanda();
     alterar_comanda();
     excluir_comanda();
-    menu_estoque();
+    opcao = menu_estoque();
     cadastrar_produto();
     exibir_produto();
     alterar_produto();
     excluir_produto();
-    menu_garcom();
+    opcao = menu_garcom();
     cadastrar_garcom();
     exibir_garcom();
     alterar_garcom();
@@ -68,7 +71,7 @@ int main(void) {
 
 // Funções 
 
-void menu_principal(void) {
+char menu_principal(void) {
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
@@ -89,7 +92,7 @@ void menu_principal(void) {
 }
 
 
-void menu_comandas(void) {
+char menu_comandas(void) {
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
@@ -178,7 +181,7 @@ void excluir_comanda(void) {
 }
 
 
-void menu_estoque(void) {
+char menu_estoque(void) {
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
@@ -266,7 +269,7 @@ void excluir_produto(void) {
 }
 
 
-void menu_garcom(void) {
+char menu_garcom(void) {
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
