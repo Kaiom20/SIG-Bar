@@ -88,6 +88,7 @@ void menu_principal(void) {
 
 
 void menu_comandas(void) {
+    system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|           Menu Comandas          |===============|\n");
@@ -105,6 +106,7 @@ void menu_comandas(void) {
 
 
 void cadastrar_comanda(void) {
+    system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|         Cadastrar Comanda        |===============|\n");
@@ -123,6 +125,7 @@ void cadastrar_comanda(void) {
 
 
 void exibir_comanda(void) {
+    system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Exibir Comanda          |===============|\n");
@@ -136,6 +139,7 @@ void exibir_comanda(void) {
 
 
 void alterar_comanda(void) {
+    system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Alterar Comanda         |===============|\n");
@@ -149,6 +153,7 @@ void alterar_comanda(void) {
 
 
 void excluir_comanda(void) {
+    system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Excluir Comanda         |===============|\n");
@@ -162,6 +167,7 @@ void excluir_comanda(void) {
 
 
 void menu_estoque(void) {
+    system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|            Menu Estoque          |===============|\n");
@@ -179,6 +185,7 @@ void menu_estoque(void) {
 
 
 void cadastrar_produto(void) {
+    system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|        Cadastrar Produto         |===============|\n");
@@ -196,6 +203,7 @@ void cadastrar_produto(void) {
 
 
 void exibir_produto(void) {
+    system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Exibir Produto          |===============|\n");
@@ -209,6 +217,7 @@ void exibir_produto(void) {
 
 
 void alterar_produto(void) {
+    system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Alterar Produto         |===============|\n");
@@ -222,6 +231,7 @@ void alterar_produto(void) {
 
 
 void excluir_produto(void) {
+    system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Excluir Produto         |===============|\n");
@@ -235,6 +245,7 @@ void excluir_produto(void) {
 
 
 void menu_garcom(void) {
+    system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|            Menu Garçom           |===============|\n");
@@ -252,6 +263,7 @@ void menu_garcom(void) {
 
 
 void cadastrar_garcom(void) {
+    system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|        Cadastrar Garçom          |===============|\n");
@@ -269,6 +281,7 @@ void cadastrar_garcom(void) {
 
 
 void exibir_garcom(void) {
+    system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Exibir Garçom           |===============|\n");
@@ -282,6 +295,7 @@ void exibir_garcom(void) {
 
 
 void alterar_garcom(void) {
+    system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Alterar Garçom          |===============|\n");
@@ -295,6 +309,7 @@ void alterar_garcom(void) {
 
 
 void excluir_garcom(void) {
+    system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Excluir Garçom          |===============|\n");
@@ -308,6 +323,7 @@ void excluir_garcom(void) {
 
 
 void menu_relatorios(void) {
+    system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Menu Relatórios         |===============|\n");
@@ -324,6 +340,7 @@ void menu_relatorios(void) {
 
 
 void info(void) {
+    system("clear||cls");
     printf("\n");
     printf("|========================================================================================|\n");
     printf("|==================|                    Informações                   |==================|\n");
@@ -336,15 +353,15 @@ void info(void) {
     printf("|=====|                                                                            |=====|\n");
     printf("|=====|             Projeto em desenvolvimento por:                                |=====|\n");
     printf("|=====|                                                                            |=====|\n");
-    printf("|=====|                      Kaio Márcio Araújo Cavalcante Lira                    |=====|\n");
-    printf("|=====|                      E-mail: kaio.lira.080@ufrn.edu.br                     |=====|\n");
-    printf("|=====|                      Instagram: @kaiom.20                                  |=====|\n");
-    printf("|=====|                      Git: https://github.com/Kaiom20                       |=====|\n");
+    printf("|=====|                    Kaio Márcio Araújo Cavalcante Lira                      |=====|\n");
+    printf("|=====|                    E-mail: kaio.lira.080@ufrn.edu.br                       |=====|\n");
+    printf("|=====|                    Instagram: @kaiom.20                                    |=====|\n");
+    printf("|=====|                    Git: https://github.com/Kaiom20                         |=====|\n");
     printf("|=====|                                                                            |=====|\n");
-    printf("|=====|                      Fillipe Medeiros Araújo Morais                        |=====|\n");
-    printf("|=====|                      E-mail: fillipe.morais.095@ufrn.edu.br                |=====|\n");
-    printf("|=====|                      Instagram: @fillipemdrs                               |=====|\n");
-    printf("|=====|                      Git: https://github.com/fillipemdrs                   |=====|\n");
+    printf("|=====|                    Fillipe Medeiros Araújo Morais                          |=====|\n");
+    printf("|=====|                    E-mail: fillipe.morais.095@ufrn.edu.br                  |=====|\n");
+    printf("|=====|                    Instagram: @fillipemdrs                                 |=====|\n");
+    printf("|=====|                    Git: https://github.com/fillipemdrs                     |=====|\n");
     printf("|=====|                                                                            |=====|\n");
     printf("|=====|                                               -- desde Set, 2024           |=====|\n");
     printf("|========================================================================================|\n");
