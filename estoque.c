@@ -1,20 +1,20 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include "comandas.h"
+#include "estoque.h"
 
 //Funções
-char menu_comandas(void) {
+char menu_estoque(void) {
     char opc;
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
-    printf("|===============|           Menu Comandas          |===============|\n");
+    printf("|===============|            Menu Estoque          |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|                [1] Cadastrar Comanda                 |=====|\n");
-    printf("|=====|                [2] Exibir Comanda                    |=====|\n");
-    printf("|=====|                [3] Alterar Comanda                   |=====|\n");
-    printf("|=====|                [4] Excluir Comanda                   |=====|\n");
+    printf("|=====|                [1] Cadastrar Produto                 |=====|\n");
+    printf("|=====|                [2] Exibir Produto                    |=====|\n");
+    printf("|=====|                [3] Alterar Produto                   |=====|\n");
+    printf("|=====|                [4] Excluir Produto                   |=====|\n");
     printf("|=====|                [0] Retornar ao Menu Principal        |=====|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
@@ -28,18 +28,17 @@ char menu_comandas(void) {
 }
 
 
-void cadastrar_comanda(void) {
+void cadastrar_produto(void) {
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
-    printf("|===============|         Cadastrar Comanda        |===============|\n");
+    printf("|===============|        Cadastrar Produto         |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID da Comanda:                         |=====|\n");
-    printf("|=====|               Data:                                  |=====|\n");
-    printf("|=====|               Hora:                                  |=====|\n");
-    printf("|=====|               Mesa:                                  |=====|\n");
-    printf("|=====|               ID do Garçom:                          |=====|\n");
+    printf("|=====|               ID do item:                            |=====|\n");
+    printf("|=====|               Nome:                                  |=====|\n");
+    printf("|=====|               Validade:                              |=====|\n");
+    printf("|=====|               Quantidade:                            |=====|\n");
     printf("|=====|               Valor:                                 |=====|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
@@ -49,14 +48,14 @@ void cadastrar_comanda(void) {
 }
 
 
-void exibir_comanda(void) {
+void exibir_produto(void) {
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
-    printf("|===============|          Exibir Comanda          |===============|\n");
+    printf("|===============|          Exibir Produto          |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID da Comanda:                         |=====|\n");
+    printf("|=====|               ID do Produto:                         |=====|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
@@ -65,14 +64,14 @@ void exibir_comanda(void) {
 }
 
 
-void alterar_comanda(void) {
+void alterar_produto(void) {
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
-    printf("|===============|          Alterar Comanda         |===============|\n");
+    printf("|===============|          Alterar Produto         |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID da Comanda:                         |=====|\n");
+    printf("|=====|               ID do Produto:                         |=====|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
@@ -81,14 +80,14 @@ void alterar_comanda(void) {
 }
 
 
-void excluir_comanda(void) {
+void excluir_produto(void) {
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
-    printf("|===============|          Excluir Comanda         |===============|\n");
+    printf("|===============|          Excluir Produto         |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID da Comanda:                         |=====|\n");
+    printf("|=====|               ID do Produto:                         |=====|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
