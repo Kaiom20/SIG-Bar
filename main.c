@@ -125,6 +125,15 @@ void relatorio_estoque(void) {
 }
 
 
+void relatorio_garcom(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("|=====================================================================|\n");
+    printf("|===============|          Relatório Garçom           |===============|\n");
+    printf("|=====================================================================|\n");
+}
+
+
 void info(void) {
     system("clear||cls");
     printf("\n");
