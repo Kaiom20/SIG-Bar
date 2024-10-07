@@ -116,6 +116,15 @@ void relatorio_comandas(void) {
 }
 
 
+void relatorio_estoque(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("|=====================================================================|\n");
+    printf("|===============|          Relatório Estoque          |===============|\n");
+    printf("|=====================================================================|\n");
+}
+
+
 void info(void) {
     system("clear||cls");
     printf("\n");
