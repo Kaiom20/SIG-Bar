@@ -20,9 +20,9 @@
 // Assinatura das funções
 char menu_principal(void);
 char menu_relatorios(void);
-
-
-
+void relatorio_comandas(void);
+void relatorio_estoque(void);
+void relatorio_garcom(void);
 void info(void);
 
 
@@ -47,9 +47,9 @@ int main(void) {
     alterar_garcom();
     excluir_garcom();
     opcao = menu_relatorios();
-
-
-
+    relatorio_comandas();
+    relatorio_estoque();
+    relatorio_garcom();
     info();
     return 0;
 }
@@ -104,6 +104,15 @@ char menu_relatorios(void) {
     printf("\n");
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
     getchar();
+}
+
+
+void relatorio_comandas(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("|=====================================================================|\n");
+    printf("|===============|          Relatório Comandas         |===============|\n");
+    printf("|=====================================================================|\n");
 }
 
 
