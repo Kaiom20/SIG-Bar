@@ -1,4 +1,5 @@
-//Assinatura das funções
+// Assinatura das funções de comandas
+
 char menu_comandas(void);
 void cadastrar_comanda(void);
 void exibir_comanda(void);

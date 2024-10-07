@@ -1,8 +1,9 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "comandas.h"
 
-//Funções
+// Funções
+
 char menu_comandas(void) {
     char opc;
     system("clear||cls");

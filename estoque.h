@@ -1,4 +1,5 @@
-//Assinatura das funções
+// Assinatura das funções de estoque
+
 char menu_estoque(void);
 void cadastrar_produto(void);
 void exibir_produto(void);
