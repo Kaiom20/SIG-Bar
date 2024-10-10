@@ -87,13 +87,17 @@ void exibir_garcom(void) {
 
 
 void alterar_garcom(void) {
+    char id_garcom[4];
+
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Alterar Garçom          |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID do Garçom:                          |=====|\n");
+    printf("|=====|               ID do Garçom: ");
+    scanf("%[0-9]", id_garcom);
+    getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
