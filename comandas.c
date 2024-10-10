@@ -90,13 +90,17 @@ void exibir_comanda(void) {
 
 
 void alterar_comanda(void) {
+    char idcomanda[6];
+
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Alterar Comanda         |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID da Comanda:                         |=====|\n");
+    printf("|=====|               ID da Comanda: ");
+    scanf("%[0-9]", idcomanda);
+    getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
