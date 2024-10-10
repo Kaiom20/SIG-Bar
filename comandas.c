@@ -110,13 +110,17 @@ void alterar_comanda(void) {
 
 
 void excluir_comanda(void) {
+    char idcomanda[6];
+
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Excluir Comanda         |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID da Comanda:                         |=====|\n");
+    printf("|=====|               ID da Comanda: ");
+    scanf("%[0-9]", idcomanda);
+    getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
