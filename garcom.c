@@ -43,19 +43,19 @@ void cadastrar_garcom(void) {
     printf("|===============|        Cadastrar Garçom          |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               Nome: ");
+    printf("|=====|         Nome: ");
     scanf("%[A-ZÁÉÍÓÚÃÕÂÊÎÔÛÀÇ a-záéíóúãõâêîôûàç]", nome);
     getchar();
-    printf("|=====|               Data de nascimento: ");
+    printf("|=====|         Data de nascimento: ");
     scanf("%[0-9/]", nasc);
     getchar();
-    printf("|=====|               CPF: ");
+    printf("|=====|         CPF: ");
     scanf("%[0-9.-]", cpf);
     getchar();
-    printf("|=====|               Telefone: ");
+    printf("|=====|         Telefone: ");
     scanf("%[0-9()-]", telefone);
     getchar();
-    printf("|=====|               ID do Garçom: ");
+    printf("|=====|         ID do Garçom: ");
     scanf("%[0-9]", id_garcom);
     getchar();
     printf("|=====|                                                      |=====|\n");
@@ -67,13 +67,17 @@ void cadastrar_garcom(void) {
 
 
 void exibir_garcom(void) {
+    char id_garcom[4];
+    
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Exibir Garçom           |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID do Garçom:                          |=====|\n");
+    printf("|=====|               ID do Garçom: ");
+    scanf("%[0-9]", id_garcom);
+    getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
