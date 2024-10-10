@@ -77,6 +77,7 @@ char menu_principal(void) {
     printf("\n");
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
     getchar();
+    return opc;
 }
 
 

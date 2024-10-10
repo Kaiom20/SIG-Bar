@@ -26,21 +26,38 @@ char menu_garcom(void) {
     printf("\n");
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
     getchar();
+    return opc;
 }
 
 
 void cadastrar_garcom(void) {
+    char nome[52];
+    char nasc[12];
+    char cpf[16];
+    char telefone[16];
+    char id_garcom[4];
+
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|        Cadastrar Garçom          |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               Nome:                                  |=====|\n");
-    printf("|=====|               Idade:                                 |=====|\n");
-    printf("|=====|               CPF:                                   |=====|\n");
-    printf("|=====|               Telefone:                              |=====|\n");
-    printf("|=====|               ID do Garçom:                          |=====|\n");
+    printf("|=====|               Nome: ");
+    scanf("%[A-ZÁÉÍÓÚÃÕÂÊÎÔÛÀÇ a-záéíóúãõâêîôûàç]", nome);
+    getchar();
+    printf("|=====|               Data de nascimento: ");
+    scanf("%[0-9/]", nasc);
+    getchar();
+    printf("|=====|               CPF: ");
+    scanf("%[0-9.-]", cpf);
+    getchar();
+    printf("|=====|               Telefone: ");
+    scanf("%[0-9()-]", telefone);
+    getchar();
+    printf("|=====|               ID do Garçom: ");
+    scanf("%[0-9]", id_garcom);
+    getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
