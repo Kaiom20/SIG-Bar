@@ -25,6 +25,7 @@ char menu_relatorios(void) {
     printf("\n");
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
     getchar();
+    return opc;
 }
 
 
