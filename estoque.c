@@ -86,13 +86,16 @@ void exibir_produto(void) {
 
 
 void alterar_produto(void) {
+    char idprod[6];
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Alterar Produto         |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID do Produto:                         |=====|\n");
+    printf("|=====|               ID do Produto: ");
+    scanf("%[0-9]", idprod);
+    getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
