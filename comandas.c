@@ -26,6 +26,7 @@ char menu_comandas(void) {
     printf("\n");
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
     getchar();
+    return opc;
 }
 
 
