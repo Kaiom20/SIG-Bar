@@ -26,21 +26,38 @@ char menu_estoque(void) {
     printf("\n");
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
     getchar();
+    return opc;
 }
 
 
 void cadastrar_produto(void) {
+    char idprod[6];
+    char nome[35];
+    char valid[11];
+    char quant[5];
+    char valor[8];
+
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|        Cadastrar Produto         |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID do item:                            |=====|\n");
-    printf("|=====|               Nome:                                  |=====|\n");
-    printf("|=====|               Validade:                              |=====|\n");
-    printf("|=====|               Quantidade:                            |=====|\n");
-    printf("|=====|               Valor:                                 |=====|\n");
+    printf("|=====|               ID do Produto: ");
+    scanf("%[0-9]", idprod);
+    getchar();
+    printf("|=====|               Nome: ");
+    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
+    getchar();
+    printf("|=====|               Validade (dd/mm/aaaa): ");
+    scanf("%[0-9/]", valid);
+    getchar();
+    printf("|=====|               Quantidade: ");
+    scanf("%[0-9]", quant);
+    getchar();
+    printf("|=====|               Valor: ");
+    scanf("%[0-9,]", valor);
+    getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
@@ -50,13 +67,16 @@ void cadastrar_produto(void) {
 
 
 void exibir_produto(void) {
+    char idprod[6];
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Exibir Produto          |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID do Produto:                         |=====|\n");
+    printf("|=====|               ID do Produto: ");
+    scanf("%[0-9]", idprod);
+    getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
@@ -66,13 +86,16 @@ void exibir_produto(void) {
 
 
 void alterar_produto(void) {
+    char idprod[6];
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Alterar Produto         |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID do Produto:                         |=====|\n");
+    printf("|=====|               ID do Produto: ");
+    scanf("%[0-9]", idprod);
+    getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
@@ -82,13 +105,16 @@ void alterar_produto(void) {
 
 
 void excluir_produto(void) {
+    char idprod[6];
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Excluir Produto         |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID do Produto:                         |=====|\n");
+    printf("|=====|               ID do Produto: ");
+    scanf("%[0-9]", idprod);
+    getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
