@@ -105,13 +105,16 @@ void alterar_produto(void) {
 
 
 void excluir_produto(void) {
+    char idprod[6];
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Excluir Produto         |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID do Produto:                         |=====|\n");
+    printf("|=====|               ID do Produto: ");
+    scanf("%[0-9]", idprod);
+    getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
