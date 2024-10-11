@@ -37,7 +37,7 @@ int main(void) {
                 case '1':       modulo_comanda();
                                     break;
 
-                case '2':       menu_estoque();
+                case '2':       modulo_estoque();
                                     break;
 
                 case '3':       menu_garcom();
