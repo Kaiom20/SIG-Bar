@@ -25,29 +25,33 @@ void info(void);
 
 // Programa Principal
 int main(void) {
+    
     setlocale(LC_ALL, "Portuguese_Brazil");
     char opcao;
-    opcao = menu_principal();
-    opcao = menu_comandas();
-    cadastrar_comanda();
-    exibir_comanda();
-    alterar_comanda();
-    excluir_comanda();
-    opcao = menu_estoque();
-    cadastrar_produto();
-    exibir_produto();
-    alterar_produto();
-    excluir_produto();
-    opcao = menu_garcom();
-    cadastrar_garcom();
-    exibir_garcom();
-    alterar_garcom();
-    excluir_garcom();
-    opcao = menu_relatorios();
-    relatorio_comandas();
-    relatorio_estoque();
-    relatorio_garcom();
-    info();
+    
+    do {
+            opcao = menu_principal();
+            
+            switch(opcao) {
+
+                case '1':       menu_comandas();
+                                    break;
+
+                case '2':       menu_estoque();
+                                    break;
+
+                case '3':       menu_garcom();
+                                    break;
+
+                case '4':       menu_relatorios();
+                                    break;
+                                    
+                case '5':       info();
+                                    break;    
+            }
+            
+    } while (opcao != '0');
+
     return 0;
 }
 
