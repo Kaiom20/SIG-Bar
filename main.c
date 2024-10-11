@@ -34,7 +34,7 @@ int main(void) {
             
             switch(opcao) {
 
-                case '1':       menu_comandas();
+                case '1':       modulo_comanda();
                                     break;
 
                 case '2':       menu_estoque();
