@@ -34,10 +34,10 @@ int main(void) {
             
             switch(opcao) {
 
-                case '1':       menu_comandas();
+                case '1':       modulo_comanda();
                                     break;
 
-                case '2':       menu_estoque();
+                case '2':       modulo_estoque();
                                     break;
 
                 case '3':       modulo_garcom();
