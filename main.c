@@ -40,10 +40,10 @@ int main(void) {
                 case '2':       menu_estoque();
                                     break;
 
-                case '3':       menu_garcom();
+                case '3':       modulo_garcom();
                                     break;
 
-                case '4':       menu_relatorios();
+                case '4':       modulo_relatorio();
                                     break;
                                     
                 case '5':       info();

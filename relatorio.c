@@ -4,6 +4,27 @@
 
 // Funções
 
+void modulo_relatorio(void) {
+
+    char opcao;
+
+    do {
+        opcao = menu_relatorios();
+
+        switch(opcao) {
+
+            case '1':       relatorio_comandas();
+                                break;
+                                
+            case '2':       relatorio_estoque();
+                                break;
+
+            case '3':       relatorio_garcom();
+                                break;
+        }
+
+    } while (opcao != '0');
+}
 char menu_relatorios(void) {
     char opc;
     system("clear||cls");
