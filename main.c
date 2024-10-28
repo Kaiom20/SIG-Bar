@@ -87,7 +87,7 @@ void info(void) {
     printf("|==================|                    Informações                   |==================|\n");
     printf("|========================================================================================|\n");
     printf("|=====|                                                                            |=====|\n");
-    printf("|=====|           rojeto de um Sistema de Gestão para um Bar e Restaurante         |=====|\n");
+    printf("|=====|          Projeto de um Sistema de Gestão para um Bar e Restaurante         |=====|\n");
     printf("|=====|                      Sistemas de Informação / UFRN                         |=====|\n");
     printf("|=====|                      Disciplina: Programação                               |=====|\n");
     printf("|=====|                      Professor: Flavius da Luz e Gorgônio                  |=====|\n");
