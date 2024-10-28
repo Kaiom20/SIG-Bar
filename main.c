@@ -6,7 +6,7 @@
 |=====|          Sistemas de Informação / UFRN          |=====|
 |=====|                  Programação                    |=====|
 |=====|      Alunos: Kaio Márcio e Fillipe Medeiros     |=====|
-|=====|                   Versão 0.5                    |=====|
+|=====|                   Versão 0.6                    |=====|
 |=============================================================|
 */
 
@@ -20,7 +20,7 @@
 
 // Assinatura das funções
 char menu_principal(void);
-void info(void);
+void info(void);                       //em breve estarão no módulo interfaces
 
 
 // Programa Principal
@@ -30,33 +30,28 @@ int main(void) {
     char opcao;
     
     do {
-            opcao = menu_principal();
-            
-            switch(opcao) {
+        opcao = menu_principal();
+        
+        switch(opcao) {
+            case '1': modulo_comanda();
+                        break;
+            case '2': modulo_estoque();
+                        break;
+            case '3': modulo_garcom();
+                        break;
+            case '4': modulo_relatorio();
+                        break;                     
+            case '5': info();
+                        break;    
+        }   
 
-                case '1':       modulo_comanda();
-                                    break;
-
-                case '2':       modulo_estoque();
-                                    break;
-
-                case '3':       modulo_garcom();
-                                    break;
-
-                case '4':       modulo_relatorio();
-                                    break;
-                                    
-                case '5':       info();
-                                    break;    
-            }
-            
     } while (opcao != '0');
 
     return 0;
 }
 
 
-// Funções 
+// Funções          em breve estarão no módulo interfaces
 
 char menu_principal(void) {
     char opc;

@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "estoque.h"
 
-// Funções
 
 void modulo_estoque(void){
     char opcao;
@@ -22,15 +21,7 @@ void modulo_estoque(void){
 }
 
 
-
-
-
-
-
-
-
-
-
+// Funções
 char menu_estoque(void) {
     char opc;
     system("clear||cls");

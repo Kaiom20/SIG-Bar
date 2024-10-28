@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "relatorio.h"
 
-// Funções
 
 void modulo_relatorio(void) {
 
@@ -12,19 +11,19 @@ void modulo_relatorio(void) {
         opcao = menu_relatorios();
 
         switch(opcao) {
-
-            case '1':       relatorio_comandas();
-                                break;
-                                
-            case '2':       relatorio_estoque();
-                                break;
-
-            case '3':       relatorio_garcom();
-                                break;
+            case '1': relatorio_comandas();
+                        break;              
+            case '2': relatorio_estoque();
+                        break;
+            case '3': relatorio_garcom();
+                        break;
         }
 
     } while (opcao != '0');
 }
+
+
+// Funções
 char menu_relatorios(void) {
     char opc;
     system("clear||cls");
@@ -50,7 +49,7 @@ char menu_relatorios(void) {
 }
 
 
-void relatorio_comandas(void) {
+void relatorio_comandas(void) {          //sem funcionalidade no momento
     system("clear||cls");
     printf("\n");
     printf("|=====================================================================|\n");
@@ -62,7 +61,7 @@ void relatorio_comandas(void) {
 }
 
 
-void relatorio_estoque(void) {
+void relatorio_estoque(void) {          //sem funcionalidade no momento
     system("clear||cls");
     printf("\n");
     printf("|=====================================================================|\n");
@@ -74,7 +73,7 @@ void relatorio_estoque(void) {
 }
 
 
-void relatorio_garcom(void) {
+void relatorio_garcom(void) {          //sem funcionalidade no momento
     system("clear||cls");
     printf("\n");
     printf("|=====================================================================|\n");

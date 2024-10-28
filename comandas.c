@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "comandas.h"
 
-// Funções
 
 void modulo_comanda(void){
     char opcao;
@@ -22,6 +21,7 @@ void modulo_comanda(void){
 }
 
 
+// Funções
 char menu_comandas(void) {
     char opc;
     system("clear||cls");
