@@ -91,18 +91,23 @@ Esse projeto foi desenvolvido com o seguinte editor de código:
 ### Kaio Márcio ->
 - Github: [Kaiom20](https://github.com/Kaiom20) 
 - Linkedin: [Kaio Márcio Lira](https://www.linkedin.com/in/kaio-márcio-lira-24264b2b7/)
-- Instargam: https://www.instagram.com/kaiom.20/
+- Instagram: https://www.instagram.com/kaiom.20/
 - Portifólio: 
 - E-mail: kaiomacl.20@gmail.com
 - Celular: (83) 98716-3046
 
 ### Fillipe Medeiros ->
-- GitHub: https://github.com/fillipemdrs
+- GitHub: [fillipemdrs](https://github.com/fillipemdrs)
+- Linkedin: [Fillipe Medeiros](https://www.linkedin.com/in/fillipe-medeiros-ara%C3%BAjo-morais-13bb68334/)
+- Instagram: https://www.instagram.com/fillipemdrs/
+- Portifólio:
+- E-mail: fillipemdrs.63@gmail.com
+- Celular: (83) 98131-6252
 
 ### Diêgo Axel ->
 - GitHub: [Diego-Axel](https://github.com/Diego-Axel)
 - Linkedin: [Diêgo Axel](https://www.linkedin.com/in/di%C3%AAgo-axel-1684452b5/)
-- Instargam: https://www.instagram.com/diegoaxelbsr/
+- Instagram: https://www.instagram.com/diegoaxelbsr/
 - Portifólio: https://diego-axel.github.io/
 - E-mail: diegoaxelbsr@gmail.com
 - Celular: (84) 99977-4459
