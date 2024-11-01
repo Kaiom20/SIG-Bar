@@ -1,14 +1,114 @@
-# SIG-Bar
-Projeto de um Sistema de Gestão para um Bar e Restaurante
+<p align="center">
+SIG-Bar - Um Sistema de Gestão Para Um Bar e Restaurante
+</p>
 
-#
+<p align="center">
+  <a href="#-motivacao">Motivação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-compilacao">Compilação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologia">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-ferramenta">Ferramenta</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-desenvolvedores">Desenvolvedores</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-contato">Contato</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-sobre">Sobre</a>
+</p>
+<br>
 
--> Projeto avaliativo do segundo período do Curso Bacharelado em Sistemas de Informação \
--> Universidade Federal do Rio Grande do Norte (UFRN)\
--> Disciplina: Programação \
--> Professor: Flavius da Luz e Gorgônio \
--> Caicó/RN 
+## Motivação
 
--> Em desenvolvimento por: 
-  - Kaio Márcio Araújo Cavalcante Lira 
-  - Fillipe Medeiros Araújo Morais 
+a fazer...
+
+## Compilação
+
+ ### Windows e Linux:
+
+ - Para utlizar o programa, é necessário ter Git e um compilador para linguagem C, ambos instalados em sua máquina.
+
+ - Feito isso, abra alguma pasta qualquer pelo terminal e clone o repositório digitando o seguinte comando:
+
+```shell
+https://github.com/Kaiom20/SIG-Bar.git
+ ```
+- Para compilar e rodar o programa, abra o terminal, vá até a pasta do programa e digite os seguintes comandos em sequência:
+
+### No Windows:
+
+```shell
+OBS: Para sistema operacional Windows, não possui Makefile, então a compilação será feita de forma "manual" ou, você pode buscar meios alternativos, como exemplo o WSL que simula um terminal do Linux no seu sistema operacional Windows. Para você baixar o WSL recomendo que pesquise na internet ou então peça ajuda do ChatGPT.
+```
+
+```shell
+gcc -c -Wall main.c comandas.c estoque.c garcom.c relatorio.c
+```
+
+```shell
+gcc -c -Wall comandas.h estoque.h garcom.h relatorio.h
+```
+
+```shell
+gcc -o SIG-Bar.exe main.o
+```
+### Para Executar
+
+```shell
+SIG-Bar.exe
+```
+
+### No Linux:
+
+```shell
+No Linux poderá ser usado o Makefile. Vá no seu terminal e digite "Make" se você não tiver, o linux irá mostrar o comando para baixar via terminal. Caso queria saber se você já possui o make, digite em seu terminal o comando "make --version".
+```
+
+### Para Executar
+
+```shell
+Com o Make baixado, dentro do diretório do projeto, digite "make run", ele vai compilar todos os arquvos .c e .h, criando o executavel automaticamente e já rodando o programa.
+```
+
+```shell
+Ao final, quando o programa for encerrado, digite o comando "make clean", isso limpara todos os arquivos criados pelo primeiro comando "make run".
+```
+
+##  Tecnologia
+
+Esse projeto foi desenvolvido com a seguinte tecnologia:
+
+- C
+
+##  Ferramenta
+Esse projeto foi desenvolvido com o seguinte editor de código:
+
+- Visual Studio Code
+
+##  Desenvolvedores 
+
+- Kaio Márcio
+- Fillipe Medeiros
+- Diêgo Axel
+
+## Contate-nos
+
+### Kaio Márcio ->
+- Github: [Kaiom20](https://github.com/Kaiom20) 
+- Linkedin: [Kaio Márcio Lira](https://www.linkedin.com/in/kaio-márcio-lira-24264b2b7/)
+- Instargam: https://www.instagram.com/kaiom.20/
+- Portifólio: 
+- E-mail: kaiomacl.20@gmail.com
+- Celular: (83) 98716-3046
+
+### Fillipe Medeiros ->
+- GitHub: https://github.com/fillipemdrs
+
+### Diêgo Axel ->
+- GitHub: [Diego-Axel](https://github.com/Diego-Axel)
+- Linkedin: [Diêgo Axel](https://www.linkedin.com/in/di%C3%AAgo-axel-1684452b5/)
+- Instargam: https://www.instagram.com/diegoaxelbsr/
+- Portifólio: https://diego-axel.github.io/
+- E-mail: diegoaxelbsr@gmail.com
+- Celular: (84) 99977-4459
+
+##  Sobre
+
+- Este é um Projeto do Curso de Sistemas de Informação da Universidade Federal do Rio Grande do Norte(UFRN).
+
+- Projeto Avaliativo para o 2 Semestre de 2024 na matéria de programação.
