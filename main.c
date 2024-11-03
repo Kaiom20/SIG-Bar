@@ -110,5 +110,3 @@ void info(void) {
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
     getchar();
 }
-
-// teste
