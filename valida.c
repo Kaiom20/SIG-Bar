@@ -19,3 +19,18 @@ int valida_fone(char * fone){
 
     return 1;
 }
+
+//Validação de nomes
+int valida_nome(char * nome){
+    
+    int tamanho = strlen(nome);
+
+    for (int i = 0; i < tamanho; i++){
+        if(!isalpha(nome[i]) && nome[i] != ' '){
+            return 0;
+        }
+    }
+
+    return 1;
+}
+
