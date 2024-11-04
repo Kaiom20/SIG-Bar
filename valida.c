@@ -89,9 +89,23 @@ int valida_CPF(char * cpf) {
 
 char valida_data(void) {
 
+    char dia_data[4];
+    char mes_data[4];
+    char ano_data[4];
+    
     int verificador = 1;
-
     do {
+        printf("|=====|         Dia de nascimento: ");
+        scanf("%[0-31]", dia_data);
+        getchar();
+        printf("\n");
+        printf("|=====|         Mês de nascimento: ");
+        scanf("%[0-12]", mes_data);
+        getchar();
+        printf("\n");
+        if ((mes_data == "02")) {
+            /* code */
+        }
         
     } while (verificador == 1);
     
