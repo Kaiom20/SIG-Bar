@@ -5,7 +5,8 @@
 |=====|   Sistema de Gestão para um Bar e Restaurante   |=====|
 |=====|          Sistemas de Informação / UFRN          |=====|
 |=====|                  Programação                    |=====|
-|=====|      Alunos: Kaio Márcio e Fillipe Medeiros     |=====|
+|=====|      Alunos: Kaio Márcio, Fillipe Medeiros  e   |=====|
+|=====|                   Diêgo Axel                    |=====|
 |=====|                   Versão 0.6                    |=====|
 |=============================================================|
 */
@@ -103,6 +104,11 @@ void info(void) {
     printf("|=====|                    E-mail: fillipe.morais.095@ufrn.edu.br                  |=====|\n");
     printf("|=====|                    Instagram: @fillipemdrs                                 |=====|\n");
     printf("|=====|                    Git: https://github.com/fillipemdrs                     |=====|\n");
+    printf("|=====|                                                                            |=====|\n");
+    printf("|=====|                    Diêgo Axel Bernardo Santos Rodrigues                    |=====|\n");
+    printf("|=====|                    E-mail: diegoaxelbsr@gmail.com                          |=====|\n");
+    printf("|=====|                    Instagram: @diegoaxelbsr                                |=====|\n");
+    printf("|=====|                    Git: https://github.com/Diego-Axel                     |=====|\n");
     printf("|=====|                                                                            |=====|\n");
     printf("|=====|                                               -- desde Set, 2024           |=====|\n");
     printf("|========================================================================================|\n");
