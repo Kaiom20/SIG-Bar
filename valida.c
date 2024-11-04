@@ -85,3 +85,14 @@ int valida_CPF(char * cpf) {
 
     return 1;
 }
+
+
+char valida_data(void) {
+
+    int verificador = 1;
+
+    do {
+        
+    } while (verificador == 1);
+    
+}
