@@ -82,9 +82,11 @@ Esse projeto foi desenvolvido com o seguinte editor de código:
 
 ##  Desenvolvedores 
 
-- Kaio Márcio
-- Fillipe Medeiros
-- Diêgo Axel
+| Titulo | Nome |
+| ------ | ------ |
+| Desenvolvedor | Kaio Marcio |
+| Desenvolvedor | Fillipe Medeiros |
+| Desenvolvedor | Diêgo Axel |
 
 ## Contate-nos
 
