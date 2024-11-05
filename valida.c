@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include<ctype.h>
 #include<string.h>
 
@@ -86,27 +87,36 @@ int valida_CPF(char * cpf) {
     return 1;
 }
 
+// Validação de data e ano bissexto(Créditos: André Leandro: https://github.com/andrewszada)
+int bissexto(char year[]) {
+    int ano = atoi(year); // para lidar com ela como se fosse um inteiro 
+    if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)) {
+        return 1;
+    }
+    return 0;
+}
 
-char valida_data(void) {
 
-    char dia_data[4];
-    char mes_data[4];
-    char ano_data[4];
-    
-    int verificador = 1;
-    do {
-        printf("|=====|         Dia de nascimento: ");
-        scanf("%[0-31]", dia_data);
-        getchar();
-        printf("\n");
-        printf("|=====|         Mês de nascimento: ");
-        scanf("%[0-12]", mes_data);
-        getchar();
-        printf("\n");
-        if ((mes_data == "02")) {
-            /* code */
+int dia_mes(int mes) {
+    int dias_por_mes[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    return dias_por_mes[mes];
+}
+
+
+int validar_data(char day[], char month[], char year[]){
+    int dia = atoi(day);
+    int mês = atoi(month);
+    if (mês < 1 || mês > 12) {
+        return 0; // limitação de meses
+    }
+    int maior_dia = dia_mes(mês);
+
+    if (mês == 2) { // quando for fevereiro
+        if (bissexto(year)) {
+            maior_dia = 29;
+        } else {
+            maior_dia = 28;
         }
-        
-    } while (verificador == 1);
-    
+    }
+    return dia <= maior_dia;
 }
