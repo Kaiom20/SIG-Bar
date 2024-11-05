@@ -91,28 +91,22 @@ Esse projeto foi desenvolvido com o seguinte editor de código:
 ## Contate-nos
 
 ### Kaio Márcio ->
-- Github: [Kaiom20](https://github.com/Kaiom20) 
-- Linkedin: [Kaio Márcio Lira](https://www.linkedin.com/in/kaio-márcio-lira-24264b2b7/)
-- Instagram: https://www.instagram.com/kaiom.20/
-- Portifólio: 
-- E-mail: kaiomacl.20@gmail.com
-- Celular: (83) 98716-3046
+
+| GitHub | Linkedin | Instagram | Portifólio | E-mail | Celular |
+| ------ | ------ | ------ | ------ | ------ | ------ |
+| [Kaiom20](https://github.com/Kaiom20) | [Kaio Márcio Lira](https://www.linkedin.com/in/kaio-márcio-lira-24264b2b7/) | [Kaio Márcio](https://www.instagram.com/kaiom.20/) | Null | kaiomacl.20@gmail.com | (83) 98716-3046 |
 
 ### Fillipe Medeiros ->
-- GitHub: [fillipemdrs](https://github.com/fillipemdrs)
-- Linkedin: [Fillipe Medeiros](https://www.linkedin.com/in/fillipe-medeiros-ara%C3%BAjo-morais-13bb68334/)
-- Instagram: https://www.instagram.com/fillipemdrs/
-- Portifólio:
-- E-mail: fillipemdrs.63@gmail.com
-- Celular: (83) 98131-6252
+
+| GitHub | Linkedin | Instagram | Portifólio | E-mail | Celular |
+| ------ | ------ | ------ | ------ | ------ | ------ |
+| [fillipemdrs](https://github.com/fillipemdrs) | [Fillipe Medeiros](https://www.linkedin.com/in/fillipe-medeiros-ara%C3%BAjo-morais-13bb68334/) | [Fillipe Medeiros](https://www.instagram.com/fillipemdrs/) | Null | fillipemdrs.63@gmail.com | (83) 98131-6252 |
 
 ### Diêgo Axel ->
-- GitHub: [Diego-Axel](https://github.com/Diego-Axel)
-- Linkedin: [Diêgo Axel](https://www.linkedin.com/in/di%C3%AAgo-axel-1684452b5/)
-- Instagram: https://www.instagram.com/diegoaxelbsr/
-- Portifólio: https://diego-axel.github.io/
-- E-mail: diegoaxelbsr@gmail.com
-- Celular: (84) 99977-4459
+
+| GitHub | Linkedin | Instagram | Portifólio | E-mail | Celular |
+| ------ | ------ | ------ | ------ | ------ | ------ |
+| [Diego-Axel](https://github.com/Diego-Axel) | [Diêgo Axel](https://www.linkedin.com/in/di%C3%AAgo-axel-1684452b5/) | [Axel](https://www.instagram.com/diegoaxelbsr/) | [Diêgo_Dev](https://diego-axel.github.io/) | diegoaxelbsr@gmail.com | (84) 99977-4459 |
 
 ##  Sobre
 
