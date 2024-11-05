@@ -4,4 +4,6 @@ int valida_fone(char*);
 int valida_nome(char*);
 int digitos_iguais(char*);
 int valida_CPF(char*);
-char valida_data(void);
+int bissexto(char year[]);
+int dia_mes(int mes);
+int validar_data(char day[], char month[], char year[]);
