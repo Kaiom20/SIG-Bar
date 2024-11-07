@@ -84,12 +84,10 @@ int validarDigitosCPF(const char *cpf) {
 
 int validarCPF(const char *cpf) {
     if (!validarFormatoCPF(cpf)) {
-        printf("Formato de CPF inválido.\n");
         return 0;
     }
    
     if (!validarDigitosCPF(cpf)) {
-        printf("Dígitos verificadores inválidos.\n");
         return 0;
     }
    

@@ -70,9 +70,7 @@ void cadastrar_garcom(void) {
     printf("|=====|                                                      |=====|\n");
     ler_nome(nome);
     ler_nasc(nasc);
-    getchar();
     ler_cpf(cpf);
-    getchar();
     ler_fone(telefone);
     getchar();
     ler_idgar(id_garcom);

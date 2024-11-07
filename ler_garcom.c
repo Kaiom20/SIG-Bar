@@ -5,7 +5,6 @@
 
 // funções
 
-
 void ler_nome(char * nome){
     int verificador = 1;
     while (verificador == 1){
@@ -13,7 +12,6 @@ void ler_nome(char * nome){
         scanf("%[A-ZÁÉÍÓÚÃÕÂÊÎÔÛÀÇ a-záéíóúãõâêîôûàç]", nome);
         getchar();
         if(valida_nome(nome) == 1){
-            printf("|=====|         O nome é válido!\n");
             verificador = 0;
         } else{
             printf("|=====|         O nome não é válido!\n");
@@ -24,19 +22,31 @@ void ler_nome(char * nome){
     }
 }
 
-
 void ler_nasc(char * nasc) {
     printf("|=====|         Data de nascimento: ");
     scanf("%[0-9/]", nasc);
+    getchar();
 }
 
 void ler_cpf(char * cpf){
-    printf("|=====|         CPF: ");
-    scanf("%[0-9.-]", cpf);
+    int verificador = 1;
+    while (verificador == 1){
+        printf("|=====|         CPF: ");
+        scanf("%[0-9.-]", cpf);
+        getchar();
+        if(validarCPF(cpf) == 1){
+            verificador = 0;
+        } else{
+            printf("|=====|         O CPF não é válido!\n");
+            printf("|=====|         Tente novamente!\n");
+            printf("|=====|\n");
+            getchar();
+        }
+    }
 }
 
 void ler_fone(char * telefone){
-    printf("|=====|         Telefone: ");
+    printf("|=====|         Telefone (SÓ NÚMEROS): ");
     scanf("%[0-9()-]", telefone);
 }
 
