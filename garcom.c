@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include "garcom.h"
 
+// Bilioteca para leitura dos dados:
+#include "ler_garcom.h"
+
 
 void modulo_garcom(void) {
     
@@ -65,8 +68,7 @@ void cadastrar_garcom(void) {
     printf("|===============|        Cadastrar Garçom          |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|         Nome: ");
-    scanf("%[A-ZÁÉÍÓÚÃÕÂÊÎÔÛÀÇ a-záéíóúãõâêîôûàç]", nome);
+    ler_nome(nome);
     getchar();
     printf("|=====|         Data de nascimento: ");
     scanf("%[0-9/]", nasc);
