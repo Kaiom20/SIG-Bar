@@ -25,3 +25,8 @@ void ler_fone(char * telefone){
     printf("|=====|         Telefone: ");
     scanf("%[0-9()-]", telefone);
 }
+
+void ler_id(char * id_garcom){
+    printf("|=====|         ID do Garçom: ");
+    scanf("%[0-9]", id_garcom);
+}
