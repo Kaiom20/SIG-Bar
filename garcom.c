@@ -74,8 +74,7 @@ void cadastrar_garcom(void) {
     getchar();
     ler_cpf(cpf);
     getchar();
-    printf("|=====|         Telefone: ");
-    scanf("%[0-9()-]", telefone);
+    ler_fone(telefone);
     getchar();
     printf("|=====|         ID do Garçom: ");
     scanf("%[0-9]", id_garcom);
