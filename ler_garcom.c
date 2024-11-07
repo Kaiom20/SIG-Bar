@@ -20,3 +20,8 @@ void ler_cpf(char * cpf){
     printf("|=====|         CPF: ");
     scanf("%[0-9.-]", cpf);
 }
+
+void ler_fone(char * telefone){
+    printf("|=====|         Telefone: ");
+    scanf("%[0-9()-]", telefone);
+}
