@@ -17,3 +17,10 @@ void ler_nomeProd(char *nome) {
     scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
     getchar();
 }
+
+
+void ler_validade(char *valid) {
+    printf("|=====|               Validade (dd/mm/aaaa): ");
+    scanf("%[0-9/]", valid);
+    getchar();
+}
