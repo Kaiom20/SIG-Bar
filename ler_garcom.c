@@ -46,11 +46,24 @@ void ler_cpf(char * cpf){
 }
 
 void ler_fone(char * telefone){
-    printf("|=====|         Telefone (SÓ NÚMEROS): ");
-    scanf("%[0-9()-]", telefone);
+    int verificador = 1;
+    while (verificador == 1){
+        printf("|=====|         Telefone (SÓ NÚMEROS): ");
+        scanf("%[0-9()-]", telefone);
+        getchar();
+        if(valida_fone(telefone) == 1){
+            verificador = 0;
+        } else{
+            printf("|=====|         O telefone não é válido!\n");
+            printf("|=====|         Tente novamente!\n");
+            printf("|=====|\n");
+            getchar();
+        }
+    }
 }
 
 void ler_idgar(char * id_garcom){
     printf("|=====|         ID do Garçom: ");
     scanf("%[0-9]", id_garcom);
+    getchar();
 }
