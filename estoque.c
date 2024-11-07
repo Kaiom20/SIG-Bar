@@ -65,9 +65,7 @@ void cadastrar_produto(void) {
     printf("|=====|                                                      |=====|\n");
     ler_idprod(idprod);
     ler_nomeProd(nome);
-    getchar();
-    printf("|=====|               Validade (dd/mm/aaaa): ");
-    scanf("%[0-9/]", valid);
+    ler_validade(valid);
     getchar();
     printf("|=====|               Quantidade: ");
     scanf("%[0-9]", quant);
