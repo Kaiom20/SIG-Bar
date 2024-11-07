@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "estoque.h"
 
+// Bilioteca para leitura dos dados:
+#include "ler_estoque.h"
 
 void modulo_estoque(void){
     char opcao;
@@ -61,8 +63,7 @@ void cadastrar_produto(void) {
     printf("|===============|        Cadastrar Produto         |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID do Produto: ");
-    scanf("%[0-9]", idprod);
+    ler_id(idprod);
     getchar();
     printf("|=====|               Nome: ");
     scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
