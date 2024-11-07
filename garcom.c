@@ -72,8 +72,7 @@ void cadastrar_garcom(void) {
     getchar();
     ler_nasc(nasc);
     getchar();
-    printf("|=====|         CPF: ");
-    scanf("%[0-9.-]", cpf);
+    ler_cpf(cpf);
     getchar();
     printf("|=====|         Telefone: ");
     scanf("%[0-9()-]", telefone);
