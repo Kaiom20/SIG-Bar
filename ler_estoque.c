@@ -24,3 +24,10 @@ void ler_validade(char *valid) {
     scanf("%[0-9/]", valid);
     getchar();
 }
+
+
+void ler_quanti(char *quant) {
+    printf("|=====|               Quantidade: ");
+    scanf("%[0-9]", quant);
+    getchar();
+}
