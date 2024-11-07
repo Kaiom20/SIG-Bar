@@ -69,14 +69,13 @@ void cadastrar_garcom(void) {
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
     ler_nome(nome);
-    getchar();
     ler_nasc(nasc);
     getchar();
     ler_cpf(cpf);
     getchar();
     ler_fone(telefone);
     getchar();
-    ler_id(id_garcom);
+    ler_idgar(id_garcom);
     getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
