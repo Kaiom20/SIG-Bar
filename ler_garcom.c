@@ -38,8 +38,7 @@ void ler_cpf(char * cpf){
             verificador = 0;
         } else{
             printf("|=====|         O CPF não é válido!\n");
-            printf("|=====|         Tente novamente!\n");
-            printf("|=====|\n");
+            printf("|=====|         Pressione ENTER!");
             getchar();
         }
     }
@@ -55,8 +54,7 @@ void ler_fone(char * telefone){
             verificador = 0;
         } else{
             printf("|=====|         O telefone não é válido!\n");
-            printf("|=====|         Tente novamente!\n");
-            printf("|=====|\n");
+            printf("|=====|         Pressione ENTER!");
             getchar();
         }
     }
