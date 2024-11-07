@@ -70,8 +70,7 @@ void cadastrar_garcom(void) {
     printf("|=====|                                                      |=====|\n");
     ler_nome(nome);
     getchar();
-    printf("|=====|         Data de nascimento: ");
-    scanf("%[0-9/]", nasc);
+    ler_nasc(nasc);
     getchar();
     printf("|=====|         CPF: ");
     scanf("%[0-9.-]", cpf);
