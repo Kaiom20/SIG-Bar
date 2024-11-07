@@ -31,3 +31,10 @@ void ler_quanti(char *quant) {
     scanf("%[0-9]", quant);
     getchar();
 }
+
+
+void ler_valor(char *valor) {
+    printf("|=====|               Valor: ");
+    scanf("%[0-9,]", valor);
+    getchar();
+}
