@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "ler_estoque.h"
+#include "valida.h"
 
 
 // Funções
@@ -13,9 +14,21 @@ void ler_idprod(char *idprod) {
 
 
 void ler_nomeProd(char *nome) {
-    printf("|=====|               Nome: ");
-    scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
-    getchar();
+    int verificador = 1;
+    while(verificador == 1) {
+        printf("|=====|               Nome: ");
+        scanf("%[A-ZÁÉÍÓÚÂÊÔÇÀÃÕ a-záéíóúâêôçàãõ]", nome);
+        getchar();
+        if(valida_nome(nome) == 1) {
+            verificador = 0;
+        } else {
+            printf("|=====|         O nome não é válido!\n");
+            printf("|=====|         Tente novamente!\n");
+            printf("|=====|\n");
+            getchar();
+        }
+    }
+    
 }
 
 
