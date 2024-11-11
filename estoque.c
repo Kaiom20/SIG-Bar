@@ -42,10 +42,6 @@ char menu_estoque(void) {
     printf("|=====| Escolha uma opção: ");
     scanf("%c", &opc);
     getchar();
-    printf("|==================================================================|\n");
-    printf("\n");
-    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
-    getchar();
     return opc;
 }
 

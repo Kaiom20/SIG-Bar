@@ -73,10 +73,6 @@ char menu_principal(void) {
     printf("|=====| Escolha uma opção: ");
     scanf("%c", &opc);
     getchar();
-    printf("|==================================================================|\n");
-    printf("\n");
-    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
-    getchar();
     return opc;
 }
 
@@ -125,6 +121,6 @@ void info(void) {
     printf("|=====|                                                                            |=====|\n");
     printf("|========================================================================================|\n");
     printf("\n");
-    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    printf("\t\t\t >>>  Pressione <ENTER> para continuar  <<<");
     getchar();
 }
