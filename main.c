@@ -14,12 +14,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+
+// Funções das Comandas
 #include "comandas.h"
+
+// Funcções do Estoque
 #include "estoque.h"
-#include "garcom.h"
+
+// Funções de Garçom
+#include "garcom/garcom.h"
+
+// Funç~eos de Relatórios
 #include "relatorio.h"
 
-// Assinatura das funções
+// Assinatura das funções da MAIN
 char menu_principal(void);
 void info(void);                       //em breve estarão no módulo interfaces
 
