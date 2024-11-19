@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "ler_estoque.h"
-#include "validadores/valida.h"
+#include "../validadores/valida.h"
 
 
 // Funções
