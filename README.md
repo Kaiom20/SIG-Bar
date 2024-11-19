@@ -37,11 +37,11 @@ OBS: Para sistema operacional Windows, não possui Makefile, então a compilaç�
 ```
 
 ```shell
-gcc -c -Wall main.c comandas.c estoque.c garcom/garcom.c relatorio.c validadores/valida.c garcom/ler_garcom.c ler_estoque.c
+gcc -c -Wall main.c comandas.c estoque.c garcom/garcom.c relatorio.c validadores/valida.c garcom/ler_garcom.c ler_estoque.c interfacesPrincipais/interfaces.c
 ```
 
 ```shell
-gcc -c -Wall comandas.h estoque.h garcom/garcom.h relatorio.h validadores/valida.h garcom/ler_garcom.h ler_estoque.h
+gcc -c -Wall comandas.h estoque.h garcom/garcom.h relatorio.h validadores/valida.h garcom/ler_garcom.h ler_estoque.h interfacesPrincipais/interfaces.h
 ```
 
 ```shell
