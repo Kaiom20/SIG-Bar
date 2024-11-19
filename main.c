@@ -19,16 +19,16 @@
 #include "interfacesPrincipais/interfaces.h"
 
 // Funções das Comandas
-#include "comandas.h"
+#include "comandas/comandas.h"
 
 // Funcções do Estoque
-#include "estoque.h"
+#include "estoque/estoque.h"
 
 // Funções de Garçom
 #include "garcom/garcom.h"
 
 // Funç~eos de Relatórios
-#include "relatorio.h"
+#include "relatorio/relatorio.h"
 
 
 // Programa Principal
