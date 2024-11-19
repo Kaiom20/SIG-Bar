@@ -15,7 +15,7 @@ SIG-Bar - Um Sistema de Gestão Para Um Bar e Restaurante
 
 ## Motivação
 
-a fazer...
+O SIG-Bar é o programa ideal para gestores e proprietários de bares e restaurantes que buscam um controle eficiente de suas operações. Desenvolvido especificamente para o setor de alimentação, o SIG-Bar permite que você gerencie aspectos do seu negócio de maneira prática e organizada. Com as funcionalidades do SIG-Bar, você consegue otimizar processos e maximizar o atendimento ao cliente. SIG-Bar, a solução completa para a gestão do seu bar ou restaurante!
 
 ## Compilação
 
