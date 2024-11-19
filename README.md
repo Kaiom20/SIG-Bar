@@ -54,9 +54,8 @@ SIG-Bar.exe
 
 ### No Linux:
 
-```shell
-No Linux poderá ser usado o Makefile. Vá no seu terminal e digite "Make" se você não tiver, o linux irá mostrar o comando para baixar via terminal. Caso queria saber se você já possui o make, digite em seu terminal o comando "make --version".
-```
+> [!IMPORTANT]
+>  No Linux poderá ser usado o Makefile. Vá no seu terminal e digite "Make" se você não tiver, o linux irá mostrar o comando para baixar via terminal. Caso queria saber se você já possui o make, digite em seu terminal o comando "make --version".
 
 ### Para Executar
 
