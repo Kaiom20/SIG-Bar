@@ -7,13 +7,13 @@ CC := gcc
 CFLAGS := -Wall -Wextra -pedantic
 
 # Source files
-SRCS := main.c comandas.c estoque.c garcom/garcom.c relatorio.c validadores/valida.c garcom/ler_garcom.c ler_estoque.c
+SRCS := main.c comandas.c estoque.c garcom/garcom.c relatorio.c validadores/valida.c garcom/ler_garcom.c ler_estoque.c interfacesPrincipais/interfaces.c
 
 # Object files
 OBJS := $(SRCS:.c=.o)
 
 # Header files
-HDRS := comandas.h estoque.h garcom/garcom.h relatorio.h validadores/valida.h garcom/ler_garcom.h ler_estoque.h
+HDRS := comandas.h estoque.h garcom/garcom.h relatorio.h validadores/valida.h garcom/ler_garcom.h ler_estoque.h interfacesPrincipais/interfaces.h
 
 # Executable name
 TARGET := main
