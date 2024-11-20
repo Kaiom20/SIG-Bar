@@ -22,6 +22,7 @@
 #include "comandas/comandas.h"
 
 // Funcções do Estoque
+#include "estoque/moduloE.h"
 #include "estoque/estoque.h"
 
 // Funções de Garçom
