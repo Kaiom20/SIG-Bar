@@ -1,7 +1,7 @@
 // Assinatura das funções
 
-#ifndef MODULO
-#define MODULO
+#ifndef MODULOG
+#define MODULOG
 
 void modulo_garcom(void);
 

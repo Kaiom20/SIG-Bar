@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "modulo.h"
+#include "moduloG.h"
 #include "garcom.h"
 
 // Função do módulo garçom
