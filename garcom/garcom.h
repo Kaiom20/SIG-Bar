@@ -3,7 +3,6 @@
 #ifndef GARCOM
 #define GARCOM
 
-
 char menu_garcom(void);
 void cadastrar_garcom(void);
 void exibir_garcom(void);
