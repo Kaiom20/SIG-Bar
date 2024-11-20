@@ -25,6 +25,7 @@
 #include "estoque/estoque.h"
 
 // Funções de Garçom
+#include "garcom/modulo.h"
 #include "garcom/garcom.h"
 
 // Funç~eos de Relatórios
