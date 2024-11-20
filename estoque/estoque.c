@@ -5,24 +5,6 @@
 // Bilioteca para leitura dos dados:
 #include "ler_estoque.h"
 
-void modulo_estoque(void){
-    char opcao;
-    do {
-        opcao = menu_estoque();
-        switch(opcao){
-            case '1': cadastrar_produto();
-                        break;
-            case '2': exibir_produto();
-                        break;
-            case '3': alterar_produto();
-                        break;
-            case '4': excluir_produto();
-                        break;
-        }
-    } while (opcao != '0');
-}
-
-
 // Funções
 char menu_estoque(void) {
     char opc;

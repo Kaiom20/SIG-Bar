@@ -36,11 +36,11 @@ https://github.com/Kaiom20/SIG-Bar.git
 > Para sistema operacional Windows, não possui Makefile, então a compilação será feita de forma "manual" ou, você pode buscar meios alternativos, como exemplo o WSL que simula um terminal do Linux no seu sistema operacional Windows. Para você baixar o WSL recomendo que pesquise na internet ou então peça ajuda do ChatGPT.
 
 ```shell
-gcc -c -Wall main.c comandas.c estoque.c garcom/garcom.c relatorio.c validadores/valida.c garcom/ler_garcom.c ler_estoque.c interfacesPrincipais/interfaces.c
+gcc -c -Wall main.c comandas/comandas.c estoque/estoque.c estoque/moduloE.c garcom/garcom.c garcom/moduloG.c relatorio/relatorio.c validadores/valida.c garcom/ler_garcom.c estoque/ler_estoque.c interfacesPrincipais/interfaces.c
 ```
 
 ```shell
-gcc -c -Wall comandas.h estoque.h garcom/garcom.h relatorio.h validadores/valida.h garcom/ler_garcom.h ler_estoque.h interfacesPrincipais/interfaces.h
+gcc -c -Wall comandas/comandas.h estoque/estoque.h estoque/moduloE.h garcom/garcom.h garcom/moduloG.h relatorio/relatorio.h validadores/valida.h garcom/ler_garcom.h estoque/ler_estoque.h interfacesPrincipais/interfaces.h
 ```
 
 ```shell

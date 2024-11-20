@@ -5,29 +5,6 @@
 // Bilioteca para leitura dos dados:
 #include "ler_garcom.h"
 
-
-void modulo_garcom(void) {
-    
-    char opcao;
-
-    do {
-        opcao = menu_garcom();
-
-        switch(opcao) {
-            case '1': cadastrar_garcom();
-                        break;                      
-            case '2': exibir_garcom();
-                        break;
-            case '3': alterar_garcom();
-                        break;
-            case '4': excluir_garcom();
-                        break;
-        }
-
-    } while (opcao != '0');
-}
-
-
 // Funções
 char menu_garcom(void) {
     char opc;
