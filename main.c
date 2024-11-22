@@ -20,6 +20,7 @@
 
 // Funções das Comandas
 #include "comandas/comandas.h"
+#include "comandas/moduloC.h"
 
 // Funcções do Estoque
 #include "estoque/moduloE.h"
