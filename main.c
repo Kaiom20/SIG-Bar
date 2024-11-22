@@ -30,8 +30,9 @@
 #include "garcom/moduloG.h"
 #include "garcom/garcom.h"
 
-// Funç~eos de Relatórios
+// Funções de Relatórios
 #include "relatorio/relatorio.h"
+#include "relatorio/moduloR.h"
 
 
 // Programa Principal
