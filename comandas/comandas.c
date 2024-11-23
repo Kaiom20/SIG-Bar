@@ -27,13 +27,8 @@ char menu_comandas(void) {
 
 
 void cadastrar_comanda(void) {
-    char idcomanda[6];
-    char data[11];
-    char hora[6];
-    char mesa[3];
-    char idgarcom[3];
-    char valor[8];
-    
+    Comanda comanda;
+
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
@@ -41,22 +36,22 @@ void cadastrar_comanda(void) {
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|=====|               ID da Comanda: ");
-    scanf("%[0-9]", idcomanda);
+    scanf("%[0-9]", comanda.idcomanda);
     getchar();
     printf("|=====|               Data (dd/mm/aaaa): ");
-    scanf("%[0-9/]", data);
+    scanf("%[0-9/]", comanda.data);
     getchar();
     printf("|=====|               Hora: ");
-    scanf("%[0-9:]", hora);
+    scanf("%[0-9:]", comanda.hora);
     getchar();
     printf("|=====|               Mesa: ");
-    scanf("%[0-9]", mesa);
+    scanf("%[0-9]", comanda.mesa);
     getchar();
     printf("|=====|               ID do Garçom: ");
-    scanf("%[0-9]", idgarcom);
+    scanf("%[0-9]", comanda.idgarcom);
     getchar();
     printf("|=====|               Valor: ");
-    scanf("%[0-9,]", valor);
+    scanf("%[0-9,]", comanda.valor);
     getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
@@ -67,7 +62,7 @@ void cadastrar_comanda(void) {
 
 
 void exibir_comanda(void) {
-    char idcomanda[6];
+    Comanda comanda;
 
     system("clear||cls");
     printf("\n");
@@ -76,7 +71,7 @@ void exibir_comanda(void) {
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|=====|               ID da Comanda: ");
-    scanf("%[0-9]", idcomanda);
+    scanf("%[0-9]", comanda.idcomanda);
     getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
@@ -87,7 +82,7 @@ void exibir_comanda(void) {
 
 
 void alterar_comanda(void) {
-    char idcomanda[6];
+    Comanda comanda;
 
     system("clear||cls");
     printf("\n");
@@ -96,7 +91,7 @@ void alterar_comanda(void) {
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|=====|               ID da Comanda: ");
-    scanf("%[0-9]", idcomanda);
+    scanf("%[0-9]", comanda.idcomanda);
     getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
@@ -107,7 +102,7 @@ void alterar_comanda(void) {
 
 
 void excluir_comanda(void) {
-    char idcomanda[6];
+    Comanda comanda;
 
     system("clear||cls");
     printf("\n");
@@ -116,7 +111,7 @@ void excluir_comanda(void) {
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|=====|               ID da Comanda: ");
-    scanf("%[0-9]", idcomanda);
+    scanf("%[0-9]", comanda.idcomanda);
     getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");

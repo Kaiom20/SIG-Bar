@@ -3,6 +3,16 @@
 #ifndef ESTOQUE
 #define ESTOQUE
 
+typedef struct estoque Estoque;
+
+struct estoque {
+    char idprod[6];
+    char nome[35];
+    char valid[11];
+    char quant[5];
+    char valor[8];
+};
+
 char menu_estoque(void);
 void cadastrar_produto(void);
 void exibir_produto(void);
