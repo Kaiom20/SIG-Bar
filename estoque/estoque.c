@@ -29,11 +29,7 @@ char menu_estoque(void) {
 
 
 void cadastrar_produto(void) {
-    char idprod[6];
-    char nome[35];
-    char valid[11];
-    char quant[5];
-    char valor[8];
+    Estoque estoque;
 
     system("clear||cls");
     printf("\n");
@@ -41,11 +37,11 @@ void cadastrar_produto(void) {
     printf("|===============|        Cadastrar Produto         |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    ler_idprod(idprod);
-    ler_nomeProd(nome);
-    ler_validade(valid);
-    ler_quanti(quant);
-    ler_valor(valor);
+    ler_idprod(estoque.idprod);
+    ler_nomeProd(estoque.nome);
+    ler_validade(estoque.valid);
+    ler_quanti(estoque.quant);
+    ler_valor(estoque.valor);
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
@@ -55,7 +51,8 @@ void cadastrar_produto(void) {
 
 
 void exibir_produto(void) {
-    char idprod[6];
+    Estoque estoque;
+
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
@@ -63,7 +60,7 @@ void exibir_produto(void) {
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|=====|               ID do Produto: ");
-    scanf("%[0-9]", idprod);
+    scanf("%[0-9]", estoque.idprod);
     getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
@@ -74,7 +71,8 @@ void exibir_produto(void) {
 
 
 void alterar_produto(void) {
-    char idprod[6];
+    Estoque estoque;
+
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
@@ -82,7 +80,7 @@ void alterar_produto(void) {
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|=====|               ID do Produto: ");
-    scanf("%[0-9]", idprod);
+    scanf("%[0-9]", estoque.idprod);
     getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
@@ -93,7 +91,8 @@ void alterar_produto(void) {
 
 
 void excluir_produto(void) {
-    char idprod[6];
+    Estoque estoque;
+
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
@@ -101,7 +100,7 @@ void excluir_produto(void) {
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|=====|               ID do Produto: ");
-    scanf("%[0-9]", idprod);
+    scanf("%[0-9]", estoque.idprod);
     getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
