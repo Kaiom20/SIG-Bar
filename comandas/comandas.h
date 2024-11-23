@@ -3,7 +3,17 @@
 #ifndef COMANDAS
 #define COMANDAS
 
-void modulo_comanda(void);
+typedef struct comanda Comanda;
+
+struct comanda {
+    char idcomanda[6];
+    char data[11];
+    char hora[6];
+    char mesa[3];
+    char idgarcom[3];
+    char valor[8];
+};
+
 char menu_comandas(void);
 void cadastrar_comanda(void);
 void exibir_comanda(void);
