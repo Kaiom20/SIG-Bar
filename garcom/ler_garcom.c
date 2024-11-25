@@ -61,7 +61,15 @@ void ler_fone(char * telefone){
 }
 
 void ler_idgar(char * id_garcom){
-    printf("|=====|         ID do Garçom: ");
-    scanf("%[0-9]", id_garcom);
-    getchar();
+        int verificador = 1;
+    while(verificador == 1) {
+        printf("|=====|               ID do Garçom: ");
+        scanf("%[0-9]", id_garcom);
+        getchar();
+        if (validar_ID(id_garcom)) {
+            verificador = 0;
+        } else {
+            printf("|=====|               O ID não é válido.\n");
+        }
+    }
 }
