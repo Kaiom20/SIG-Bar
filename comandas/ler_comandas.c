@@ -38,3 +38,10 @@ void ler_idgarCom(char *idgarcom) {
     scanf("%[0-9]", idgarcom);
     getchar();
 }
+
+
+void ler_valorCom(char *valor) {
+    printf("|=====|               Valor: ");
+    scanf("%[0-9,]", valor);
+    getchar();
+}

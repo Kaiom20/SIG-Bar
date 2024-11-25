@@ -8,5 +8,6 @@ void ler_dataCom(char *data);
 void ler_hora(char *hora);
 void ler_mesa(char *mesa);
 void ler_idgarCom(char *idgarcom);
+void ler_valorCom(char *valor);
 
 #endif
