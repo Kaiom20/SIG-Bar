@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "comandas.h"
 
+// Bilioteca para leitura dos dados:
+#include "ler_comandas.h"
 
 // Funções
 char menu_comandas(void) {
@@ -35,24 +37,12 @@ void cadastrar_comanda(void) {
     printf("|===============|         Cadastrar Comanda        |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID da Comanda: ");
-    scanf("%[0-9]", comanda.idcomanda);
-    getchar();
-    printf("|=====|               Data (dd/mm/aaaa): ");
-    scanf("%[0-9/]", comanda.data);
-    getchar();
-    printf("|=====|               Hora: ");
-    scanf("%[0-9:]", comanda.hora);
-    getchar();
-    printf("|=====|               Mesa: ");
-    scanf("%[0-9]", comanda.mesa);
-    getchar();
-    printf("|=====|               ID do Garçom: ");
-    scanf("%[0-9]", comanda.idgarcom);
-    getchar();
-    printf("|=====|               Valor: ");
-    scanf("%[0-9,]", comanda.valor);
-    getchar();
+    ler_idcom(comanda.idcomanda);
+    ler_dataCom(comanda.data);
+    ler_hora(comanda.hora);
+    ler_mesa(comanda.mesa);
+    ler_idgarCom(comanda.idgarcom);
+    ler_valorCom(comanda.valor);
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
