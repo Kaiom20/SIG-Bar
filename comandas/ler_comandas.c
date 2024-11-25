@@ -6,15 +6,17 @@
 // Funções
 
 void ler_idcom(char *idcomanda) {
-    printf("|=====|               ID da Comanda: ");
-    scanf("%[0-9]", idcomanda);
-    getchar();
-    if (validar_ID(idcomanda)) {
-        printf("ID é válido.\n");
-    } else {
-        printf("ID é inválido.\n");
+    int verificador = 1;
+    while(verificador == 1) {
+        printf("|=====|               ID da Comanda: ");
+        scanf("%[0-9]", idcomanda);
+        getchar();
+        if (validar_ID(idcomanda)) {
+            verificador = 0;
+        } else {
+            printf("|=====|               O ID não é válido.\n");
+        }
     }
-    
 }
 
 
