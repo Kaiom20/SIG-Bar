@@ -42,9 +42,17 @@ void ler_mesa(char *mesa) {
 
 
 void ler_idgarCom(char *idgarcom) {
-    printf("|=====|               ID do Garçom: ");
-    scanf("%[0-9]", idgarcom);
-    getchar();
+    int verificador = 1;
+    while(verificador == 1) {
+        printf("|=====|               ID do Garçom: ");
+        scanf("%[0-9]", idgarcom);
+        getchar();
+        if (validar_ID(idgarcom)) {
+            verificador = 0;
+        } else {
+            printf("|=====|               O ID não é válido.\n");
+        }
+    }
 }
 
 
