@@ -9,6 +9,12 @@ void ler_idcom(char *idcomanda) {
     printf("|=====|               ID da Comanda: ");
     scanf("%[0-9]", idcomanda);
     getchar();
+    if (validar_ID(idcomanda)) {
+        printf("ID é válido.\n");
+    } else {
+        printf("ID é inválido.\n");
+    }
+    
 }
 
 
