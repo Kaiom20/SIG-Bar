@@ -31,3 +31,10 @@ void ler_mesa(char *mesa) {
     scanf("%[0-9]", mesa);
     getchar();
 }
+
+
+void ler_idgarCom(char *idgarcom) {
+    printf("|=====|               ID do Garçom: ");
+    scanf("%[0-9]", idgarcom);
+    getchar();
+}
