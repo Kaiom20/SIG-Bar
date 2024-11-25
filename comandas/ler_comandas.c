@@ -17,3 +17,10 @@ void ler_dataCom(char *data) {
     scanf("%[0-9/]", data);
     getchar();
 }
+
+
+void ler_hora(char *hora) {
+    printf("|=====|               Hora: ");
+    scanf("%[0-9:]", hora);
+    getchar();
+}
