@@ -7,9 +7,17 @@
 // Funções
 
 void ler_idprod(char *idprod) {
-    printf("|=====|               ID do Produto: ");
-    scanf("%[0-9]", idprod);
-    getchar();
+    int verificador = 1;
+    while(verificador == 1) {
+        printf("|=====|               ID do Produto: ");
+        scanf("%[0-9]", idprod);
+        getchar();
+        if (validar_ID(idprod)) {
+            verificador = 0;
+        } else {
+            printf("|=====|               O ID não é válido.\n");
+        }
+    }
 }
 
 
