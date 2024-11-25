@@ -10,3 +10,10 @@ void ler_idcom(char *idcomanda) {
     scanf("%[0-9]", idcomanda);
     getchar();
 }
+
+
+void ler_dataCom(char *data) {
+    printf("|=====|               Data (dd/mm/aaaa): ");
+    scanf("%[0-9/]", data);
+    getchar();
+}
