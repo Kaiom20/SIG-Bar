@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<ctype.h>
 #include<string.h>
+#include <stdbool.h>
 
 //Validação de telefones
 int valida_fone(char * fone){
@@ -126,4 +127,13 @@ int validar_data(char day[], char month[], char year[]){
         }
     }
     return dia <= maior_dia;
+}
+
+
+bool validar_ID(char* id) {
+    // Verifica se o primeiro caractere é '0'
+    if (id[0] == '0') {
+        return false; // ID inválido
+    }
+    return true; // ID válido
 }
