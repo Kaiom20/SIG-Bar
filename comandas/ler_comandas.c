@@ -24,3 +24,10 @@ void ler_hora(char *hora) {
     scanf("%[0-9:]", hora);
     getchar();
 }
+
+
+void ler_mesa(char *mesa) {
+    printf("|=====|               Mesa: ");
+    scanf("%[0-9]", mesa);
+    getchar();
+}
