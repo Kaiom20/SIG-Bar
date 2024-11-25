@@ -61,7 +61,7 @@ void ler_fone(char * telefone){
 }
 
 void ler_idgar(char * id_garcom){
-        int verificador = 1;
+    int verificador = 1;
     while(verificador == 1) {
         printf("|=====|               ID do Garçom: ");
         scanf("%[0-9]", id_garcom);
