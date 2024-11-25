@@ -39,9 +39,7 @@ void cadastrar_comanda(void) {
     printf("|=====|                                                      |=====|\n");
     ler_idcom(comanda.idcomanda);
     ler_dataCom(comanda.data);
-    printf("|=====|               Hora: ");
-    scanf("%[0-9:]", comanda.hora);
-    getchar();
+    ler_hora(comanda.hora);
     printf("|=====|               Mesa: ");
     scanf("%[0-9]", comanda.mesa);
     getchar();
