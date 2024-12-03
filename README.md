@@ -49,7 +49,7 @@ gcc -o SIG-Bar.exe main.o
 ### Para Executar
 
 ```shell
-SIG-Bar.exe
+SIG-Bar.exe ou .\SIG-Bar
 ```
 
 ### No Linux:
