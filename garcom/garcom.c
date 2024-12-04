@@ -29,8 +29,25 @@ char menu_garcom(void) {
 
 
 void cadastrar_garcom(void) {
+    FILE* fpGarc;
     Garcom* garcom;
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
+    fpGarc = fopen("comanda.dat", "wb");
+    if (fpGarc == NULL) {
+        printf("Erro na criação do arquivo!\n");
+        exit(1);
+    }
+    garcom = preencheGarcom();
+    fwrite(garcom, sizeof(Garcom), 1, fpGarc);
+    fclose(fpGarc);
+    free(garcom);
+}
 
+
+Garcom* preencheGarcom(void) {
+    Garcom* garcom;
+    garcom = (Garcom*) malloc(sizeof(Garcom));
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
@@ -47,6 +64,7 @@ void cadastrar_garcom(void) {
     printf("\n");
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
     getchar();
+    return garcom;
 }
 
 
