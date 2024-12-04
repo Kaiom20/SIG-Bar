@@ -29,8 +29,25 @@ char menu_comandas(void) {
 
 
 void cadastrar_comanda(void) {
+    FILE* fpCom;
     Comanda* comanda;
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
+    fpCom = fopen("comanda.dat", "wb");
+    if (fpCom == NULL) {
+        printf("Erro na criação do arquivo!\n");
+        exit(1);
+    }
+    comanda = preencheComanda();
+    fwrite(comanda, sizeof(Comanda), 1, fpCom);
+    fclose(fpCom);
+    free(comanda);
+}
 
+
+Comanda* preencheComanda(void) {
+    Comanda* comanda;
+    comanda = (Comanda*) malloc(sizeof(Comanda));
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
@@ -48,6 +65,7 @@ void cadastrar_comanda(void) {
     printf("\n");
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
     getchar();
+    return comanda;
 }
 
 
