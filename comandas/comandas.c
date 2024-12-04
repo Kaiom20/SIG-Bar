@@ -29,7 +29,7 @@ char menu_comandas(void) {
 
 
 void cadastrar_comanda(void) {
-    Comanda comanda;
+    Comanda* comanda;
 
     system("clear||cls");
     printf("\n");
@@ -37,12 +37,12 @@ void cadastrar_comanda(void) {
     printf("|===============|         Cadastrar Comanda        |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    ler_idcom(comanda.idcomanda);
-    ler_dataCom(comanda.data);
-    ler_hora(comanda.hora);
-    ler_mesa(comanda.mesa);
-    ler_idgarCom(comanda.idgarcom);
-    ler_valorCom(comanda.valor);
+    ler_idcom(comanda->idcomanda);
+    ler_dataCom(comanda->data);
+    ler_hora(comanda->hora);
+    ler_mesa(comanda->mesa);
+    ler_idgarCom(comanda->idgarcom);
+    ler_valorCom(comanda->valor);
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
@@ -52,7 +52,7 @@ void cadastrar_comanda(void) {
 
 
 void exibir_comanda(void) {
-    Comanda comanda;
+    Comanda* comanda;
 
     system("clear||cls");
     printf("\n");
@@ -61,7 +61,7 @@ void exibir_comanda(void) {
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|=====|               ID da Comanda: ");
-    scanf("%[0-9]", comanda.idcomanda);
+    scanf("%[0-9]", comanda->idcomanda);
     getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
@@ -72,7 +72,7 @@ void exibir_comanda(void) {
 
 
 void alterar_comanda(void) {
-    Comanda comanda;
+    Comanda* comanda;
 
     system("clear||cls");
     printf("\n");
@@ -81,7 +81,7 @@ void alterar_comanda(void) {
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|=====|               ID da Comanda: ");
-    scanf("%[0-9]", comanda.idcomanda);
+    scanf("%[0-9]", comanda->idcomanda);
     getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
@@ -92,7 +92,7 @@ void alterar_comanda(void) {
 
 
 void excluir_comanda(void) {
-    Comanda comanda;
+    Comanda* comanda;
 
     system("clear||cls");
     printf("\n");
@@ -101,7 +101,7 @@ void excluir_comanda(void) {
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|=====|               ID da Comanda: ");
-    scanf("%[0-9]", comanda.idcomanda);
+    scanf("%[0-9]", comanda->idcomanda);
     getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");

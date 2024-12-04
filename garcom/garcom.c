@@ -29,7 +29,7 @@ char menu_garcom(void) {
 
 
 void cadastrar_garcom(void) {
-    Garcom garcom;
+    Garcom* garcom;
 
     system("clear||cls");
     printf("\n");
@@ -37,11 +37,11 @@ void cadastrar_garcom(void) {
     printf("|===============|        Cadastrar Garçom          |===============|\n");
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
-    ler_nome(garcom.nome);
-    ler_nasc(garcom.nasc);
-    ler_cpf(garcom.cpf);
-    ler_fone(garcom.telefone);
-    ler_idgar(garcom.id_garcom);
+    ler_nome(garcom->nome);
+    ler_nasc(garcom->nasc);
+    ler_cpf(garcom->cpf);
+    ler_fone(garcom->telefone);
+    ler_idgar(garcom->id_garcom);
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
@@ -51,7 +51,7 @@ void cadastrar_garcom(void) {
 
 
 void exibir_garcom(void) {
-    Garcom garcom;
+    Garcom* garcom;
     
     system("clear||cls");
     printf("\n");
@@ -60,7 +60,7 @@ void exibir_garcom(void) {
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|=====|               ID do Garçom: ");
-    scanf("%[0-9]", garcom.id_garcom);
+    scanf("%[0-9]", garcom->id_garcom);
     getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
@@ -71,7 +71,7 @@ void exibir_garcom(void) {
 
 
 void alterar_garcom(void) {
-    Garcom garcom;
+    Garcom* garcom;
 
     system("clear||cls");
     printf("\n");
@@ -80,7 +80,7 @@ void alterar_garcom(void) {
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|=====|               ID do Garçom: ");
-    scanf("%[0-9]", garcom.id_garcom);
+    scanf("%[0-9]", garcom->id_garcom);
     getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
@@ -91,7 +91,7 @@ void alterar_garcom(void) {
 
 
 void excluir_garcom(void) {
-    Garcom garcom;
+    Garcom* garcom;
 
     system("clear||cls");
     printf("\n");
@@ -100,7 +100,7 @@ void excluir_garcom(void) {
     printf("|==================================================================|\n");
     printf("|=====|                                                      |=====|\n");
     printf("|=====|               ID do Garçom: ");
-    scanf("%[0-9]", garcom.id_garcom);
+    scanf("%[0-9]", garcom->id_garcom);
     getchar();
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
