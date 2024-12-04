@@ -29,8 +29,25 @@ char menu_estoque(void) {
 
 
 void cadastrar_produto(void) {
+    FILE* fpEst;
     Estoque* estoque;
+    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+    getchar();
+    fpEst = fopen("estoque.dat", "wb");
+    if (fpEst == NULL) {
+        printf("Erro na criação do arquivo!\n");
+        exit(1);
+    }
+    estoque = preencheEstoque();
+    fwrite(estoque, sizeof(Estoque), 1, fpEst);
+    fclose(fpEst);
+    free(estoque);
+}
 
+
+Estoque* preencheEstoque(void) {
+    Estoque* estoque;
+    estoque = (Estoque*) malloc(sizeof(Estoque));
     system("clear||cls");
     printf("\n");
     printf("|==================================================================|\n");
@@ -47,6 +64,7 @@ void cadastrar_produto(void) {
     printf("\n");
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
     getchar();
+    return estoque;
 }
 
 
