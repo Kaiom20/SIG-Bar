@@ -18,5 +18,6 @@ void cadastrar_garcom(void);
 void exibir_garcom(void);
 void alterar_garcom(void);
 void excluir_garcom(void);
+Garcom* preencheGarcom(void);
 
 #endif 
