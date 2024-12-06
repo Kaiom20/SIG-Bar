@@ -59,6 +59,7 @@ Estoque* preencheEstoque(void) {
     ler_validade(estoque->valid);
     ler_quanti(estoque->quant);
     ler_valor(estoque->valor);
+    estoque->status = 'a';
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
@@ -68,23 +69,58 @@ Estoque* preencheEstoque(void) {
 }
 
 
+Estoque* buscar_produto(void){
+    FILE* fpEst;
+    Estoque* estoque;
+    char idprod[6];
+    
+    system("clear||cls");
+    printf("|=====| Insira o ID do Produto: ");
+    scanf("%s", idprod);
+    getchar();
+    estoque =  (Estoque*) malloc(sizeof(Estoque));
+    fpEst = fopen("estoque.dat", "rb");
+    if (fpEst == NULL) {
+        printf("Ops! Erro na abertura do arquivo!\n");
+        printf("Não é possível continuar...\n");
+        exit(1);
+    }
+    while(!feof(fpEst)){
+        fread(estoque, sizeof(Estoque), 1, fpEst);
+        if((strcmp(estoque->idprod, idprod) == 0) && (estoque->status != 'i')){
+            fclose(fpEst);
+            return estoque;
+        }
+    }
+    fclose(fpEst);
+    return NULL;
+}
+
+
 void exibir_produto(void) {
     Estoque* estoque;
-
-    system("clear||cls");
-    printf("\n");
-    printf("|==================================================================|\n");
-    printf("|===============|          Exibir Produto          |===============|\n");
-    printf("|==================================================================|\n");
-    printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID do Produto: ");
-    scanf("%[0-9]", estoque->idprod);
-    getchar();
-    printf("|=====|                                                      |=====|\n");
-    printf("|==================================================================|\n");
-    printf("\n");
-    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
-    getchar();
+    estoque = buscar_produto();
+    if((estoque == NULL) || (estoque->status == 'i')){
+        printf("|====| O produto não existe!\n");
+        printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+        getchar();
+    } else{
+        system("clear||cls");
+        printf("\n");
+        printf("|==================================================================|\n");
+        printf("|===============|          Exibir Produto          |===============|\n");
+        printf("|==================================================================|\n");
+        printf("|=====|                                                      |=====|\n");
+        printf("|=====|               Nome: %s\n", estoque->nome);
+        printf("|=====|               Validade: %s\n", estoque->valid);
+        printf("|=====|               Quantidade: %s\n", estoque->quant);
+        printf("|=====|               Valor: %s\n", estoque->valor);
+        printf("|=====|                                                      |=====|\n");
+        printf("|==================================================================|\n");
+        printf("\n");
+        printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+        getchar();
+    }
 }
 
 

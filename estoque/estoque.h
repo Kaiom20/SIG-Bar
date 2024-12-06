@@ -11,6 +11,7 @@ struct estoque {
     char valid[11];
     char quant[5];
     char valor[8];
+    char status;
 };
 
 char menu_estoque(void);
@@ -19,5 +20,6 @@ void exibir_produto(void);
 void alterar_produto(void);
 void excluir_produto(void);
 Estoque* preencheEstoque(void);
+Estoque* buscar_produto(void);
 
 #endif
