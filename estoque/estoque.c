@@ -75,7 +75,11 @@ Estoque* buscar_produto(void){
     char idprod[6];
     
     system("clear||cls");
-    printf("|=====| Insira o ID do Produto: ");
+    printf("|==================================================================|\n");
+    printf("|===============|          Buscar Produto          |===============|\n");
+    printf("|==================================================================|\n");
+    printf("|=====|                                                      |=====|\n");
+    printf("|=====|               Insira o ID do Produto: ");
     scanf("%s", idprod);
     getchar();
     estoque =  (Estoque*) malloc(sizeof(Estoque));
