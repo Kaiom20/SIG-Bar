@@ -33,7 +33,7 @@ void cadastrar_produto(void) {
     Estoque* estoque;
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
     getchar();
-    fpEst = fopen("estoque.dat", "wb");
+    fpEst = fopen("estoque.dat", "ab");
     if (fpEst == NULL) {
         printf("Erro na criação do arquivo!\n");
         exit(1);
@@ -101,7 +101,7 @@ void exibir_produto(void) {
     Estoque* estoque;
     estoque = buscar_produto();
     if((estoque == NULL) || (estoque->status == 'i')){
-        printf("|====| O produto não existe!\n");
+        printf("|=====| O produto não existe!\n");
         printf("\t >>>  Pressione <ENTER> para continuar  <<<");
         getchar();
     } else{
@@ -121,6 +121,7 @@ void exibir_produto(void) {
         printf("\t >>>  Pressione <ENTER> para continuar  <<<");
         getchar();
     }
+    free(estoque);
 }
 
 
