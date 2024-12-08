@@ -11,6 +11,7 @@ struct garcom {
     char cpf[16];
     char telefone[16];
     char id_garcom[4];
+    char status;
 };
 
 char menu_garcom(void);
@@ -19,5 +20,6 @@ void exibir_garcom(void);
 void alterar_garcom(void);
 void excluir_garcom(void);
 Garcom* preencheGarcom(void);
+Garcom* buscar_garcom(void);
 
 #endif 

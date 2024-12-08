@@ -33,7 +33,7 @@ void cadastrar_garcom(void) {
     Garcom* garcom;
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
     getchar();
-    fpGarc = fopen("comanda.dat", "wb");
+    fpGarc = fopen("garcom.dat", "wb");
     if (fpGarc == NULL) {
         printf("Erro na criação do arquivo!\n");
         exit(1);
@@ -59,12 +59,44 @@ Garcom* preencheGarcom(void) {
     ler_cpf(garcom->cpf);
     ler_fone(garcom->telefone);
     ler_idgar(garcom->id_garcom);
+    garcom->status = 'a'
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
     getchar();
     return garcom;
+}
+
+Garcom* buscar_garcom(void){
+    FILE* fpGarc;
+    Garcom* garcom;
+    char id_garcom[4];
+    
+    system("clear||cls");
+    printf("|==================================================================|\n");
+    printf("|===============|           Buscar Garçom          |===============|\n");
+    printf("|==================================================================|\n");
+    printf("|=====|                                                      |=====|\n");
+    printf("|=====|               Insira o ID do Garçom: ");
+    scanf("%s", id_garcom);
+    getchar();
+    garcom =  (Garcom*) malloc(sizeof(Garcom));
+    fpGarc = fopen("garcom.dat", "rb");
+    if (fpGarc == NULL) {
+        printf("Erro na abertura do arquivo!\n");
+        printf("Não é possível continuar!\n");
+        exit(1);
+    }
+    while(!feof(fpGarc)){
+        fread(garcom, sizeof(Garcom), 1, fpGarc);
+        if((strcmp(garcom->id_garcom, id_garcom) == 0) && (garcom->status != 'i')){
+            fclose(fpGarc);
+            return garcom;
+        }
+    }
+    fclose(fpGarc);
+    return NULL;
 }
 
 
