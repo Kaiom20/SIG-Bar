@@ -102,21 +102,31 @@ Garcom* buscar_garcom(void){
 
 void exibir_garcom(void) {
     Garcom* garcom;
-    
-    system("clear||cls");
-    printf("\n");
-    printf("|==================================================================|\n");
-    printf("|===============|          Exibir Garçom           |===============|\n");
-    printf("|==================================================================|\n");
-    printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID do Garçom: ");
-    scanf("%[0-9]", garcom->id_garcom);
-    getchar();
-    printf("|=====|                                                      |=====|\n");
-    printf("|==================================================================|\n");
-    printf("\n");
-    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
-    getchar();
+    garcom = buscar_garcom();
+    if((garcom == NULL) || (garcom->status == 'i')){
+        printf("|=====|\n");
+        printf("|=====| O garçom não existe!\n");
+        printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+        getchar();
+    } else{
+        system("clear||cls");
+        printf("\n");
+        printf("|==================================================================|\n");
+        printf("|===============|           Exibir Garçom          |===============|\n");
+        printf("|==================================================================|\n");
+        printf("|=====|                                                      |=====|\n");
+        printf("|=====|               Nome: %s\n", garcom->nome);
+        printf("|=====|               Data de Nascimento: %s\n", garcom->nasc);
+        printf("|=====|               CPF: %s\n", garcom->cpf);
+        printf("|=====|               Telefone: %s\n", garcom->telefone);
+        printf("|=====|               ID do Garçom: %s\n", garcom->id_garcom);
+        printf("|=====|                                                      |=====|\n");
+        printf("|==================================================================|\n");
+        printf("\n");
+        printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+        getchar();
+    }
+    free(garcom);
 }
 
 
@@ -161,6 +171,7 @@ void alterar_garcom(void) {
             printf("|=====| O garçom foi alterado!\n");
             printf("\t >>>  Pressione <ENTER> para continuar  <<<");
             getchar();
+            break;
         }
     }
     if(!achou){

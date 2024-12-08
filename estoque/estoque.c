@@ -172,6 +172,7 @@ void alterar_produto(void) {
             printf("|=====| O produto foi alterado!\n");
             printf("\t >>>  Pressione <ENTER> para continuar  <<<");
             getchar();
+            break;
         }
     }
     if(!achou){
