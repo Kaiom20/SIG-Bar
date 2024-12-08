@@ -160,6 +160,7 @@ void alterar_produto(void) {
             printf("|===============|          Alterar Produto         |===============|\n");
             printf("|==================================================================|\n");
             printf("|=====|                                                      |=====|\n");
+            printf("|=====|                 Insira os novos dados:               |=====|\n");
             ler_idprod(estoque->idprod);
             ler_nomeProd(estoque->nome);
             ler_validade(estoque->valid);

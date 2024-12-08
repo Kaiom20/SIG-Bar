@@ -59,7 +59,7 @@ Garcom* preencheGarcom(void) {
     ler_cpf(garcom->cpf);
     ler_fone(garcom->telefone);
     ler_idgar(garcom->id_garcom);
-    garcom->status = 'a'
+    garcom->status = 'a';
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
@@ -121,22 +121,58 @@ void exibir_garcom(void) {
 
 
 void alterar_garcom(void) {
+    FILE* fpGarc;
     Garcom* garcom;
+    Garcom* garcomLido = buscar_garcom();
+    int achou = 0;
+    
+    if(garcomLido == NULL){
+        printf("|=====|\n");
+        printf("|=====| O garçom não existe!\n");
+        printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+        getchar();
+    } else{
+        garcom = (Garcom*) malloc(sizeof(Garcom));
+        fpGarc = fopen("garcom.dat", "r+b");
+        if (fpGarc == NULL) {
+            printf("Erro na abertura do arquivo!\n");
+            printf("Não é possível continuar!\n");
+            exit(1);
+        }
+    
+    while(!feof(fpGarc)){
+        fread(garcom, sizeof(Garcom), 1, fpGarc);
+        if (strcmp(garcom->id_garcom, garcomLido->id_garcom) == 0 && garcom->status != 'i'){
+            achou = 1;
+            system("clear||cls");
+            printf("|==================================================================|\n");
+            printf("|===============|           Alterar Garçom         |===============|\n");
+            printf("|==================================================================|\n");
+            printf("|=====|                                                      |=====|\n");
+            printf("|=====|                 Insira os novos dados:               |=====|\n");
+            ler_nome(garcom->nome);
+            ler_nasc(garcom->nasc);
+            ler_cpf(garcom->cpf);
+            ler_fone(garcom->telefone);
+            ler_idgar(garcom->id_garcom);
+            fseek(fpGarc, -1*sizeof(Garcom), SEEK_CUR);
+            fwrite(garcom, sizeof(Garcom), 1, fpGarc);
+            printf("|=====|\n");
+            printf("|=====| O garçom foi alterado!\n");
+            printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+            getchar();
+        }
+    }
+    if(!achou){
+        printf("\n|=====| Garçom não encontrado!\n");
+        printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+        getchar();
+    }
 
-    system("clear||cls");
-    printf("\n");
-    printf("|==================================================================|\n");
-    printf("|===============|          Alterar Garçom          |===============|\n");
-    printf("|==================================================================|\n");
-    printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID do Garçom: ");
-    scanf("%[0-9]", garcom->id_garcom);
-    getchar();
-    printf("|=====|                                                      |=====|\n");
-    printf("|==================================================================|\n");
-    printf("\n");
-    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
-    getchar();
+    fclose(fpGarc);
+    free(garcom);
+    }
+    free(garcomLido);
 }
 
 
