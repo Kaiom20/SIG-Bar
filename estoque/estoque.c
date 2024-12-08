@@ -106,6 +106,7 @@ void exibir_produto(void) {
     Estoque* estoque;
     estoque = buscar_produto();
     if((estoque == NULL) || (estoque->status == 'i')){
+        printf("|=====|\n");
         printf("|=====| O produto não existe!\n");
         printf("\t >>>  Pressione <ENTER> para continuar  <<<");
         getchar();
@@ -131,22 +132,57 @@ void exibir_produto(void) {
 
 
 void alterar_produto(void) {
+    FILE* fpEst;
     Estoque* estoque;
+    Estoque* estoqueLido = buscar_produto();
+    int achou = 0;
+    
+    if(estoqueLido == NULL){
+        printf("|=====|\n");
+        printf("|=====| O produto não existe!\n");
+        printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+        getchar();
+    } else{
+        estoque = (Estoque*) malloc(sizeof(Estoque));
+        fpEst = fopen("estoque.dat", "r+b");
+        if (fpEst == NULL) {
+            printf("Erro na abertura do arquivo!\n");
+            printf("Não é possível continuar!\n");
+            exit(1);
+        }
+    
+    while(!feof(fpEst)){
+        fread(estoque, sizeof(Estoque), 1, fpEst);
+        if (strcmp(estoque->idprod, estoqueLido->idprod) == 0 && estoque->status != 'i'){
+            achou = 1;
+            system("clear||cls");
+            printf("|==================================================================|\n");
+            printf("|===============|          Alterar Produto         |===============|\n");
+            printf("|==================================================================|\n");
+            printf("|=====|                                                      |=====|\n");
+            ler_idprod(estoque->idprod);
+            ler_nomeProd(estoque->nome);
+            ler_validade(estoque->valid);
+            ler_quanti(estoque->quant);
+            ler_valor(estoque->valor);
+            fseek(fpEst, -1*sizeof(Estoque), SEEK_CUR);
+            fwrite(estoque, sizeof(Estoque), 1, fpEst);
+            printf("|=====|\n");
+            printf("|=====| O produto foi alterado!\n");
+            printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+            getchar();
+        }
+    }
+    if(!achou){
+        printf("\n|=====| Produto não encontrado!\n");
+        printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+        getchar();
+    }
 
-    system("clear||cls");
-    printf("\n");
-    printf("|==================================================================|\n");
-    printf("|===============|          Alterar Produto         |===============|\n");
-    printf("|==================================================================|\n");
-    printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID do Produto: ");
-    scanf("%[0-9]", estoque->idprod);
-    getchar();
-    printf("|=====|                                                      |=====|\n");
-    printf("|==================================================================|\n");
-    printf("\n");
-    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
-    getchar();
+    fclose(fpEst);
+    free(estoque);
+    }
+    free(estoqueLido);
 }
 
 
@@ -157,6 +193,7 @@ void excluir_produto(void) {
     int achou = 0;
     
     if(estoqueLido == NULL){
+        printf("|=====|\n");
         printf("|=====| O produto não existe!\n");
         printf("\t >>>  Pressione <ENTER> para continuar  <<<");
         getchar();
@@ -176,6 +213,7 @@ void excluir_produto(void) {
             estoque->status = 'i';
             fseek(fpEst, -1*sizeof(Estoque), SEEK_CUR);
             fwrite(estoque, sizeof(Estoque), 1, fpEst);
+            printf("|=====|\n");
             printf("|=====| O produto foi excluído!\n");
             printf("\t >>>  Pressione <ENTER> para continuar  <<<");
             getchar();
