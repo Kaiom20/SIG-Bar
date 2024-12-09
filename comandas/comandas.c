@@ -60,12 +60,45 @@ Comanda* preencheComanda(void) {
     ler_mesa(comanda->mesa);
     ler_idgarCom(comanda->idgarcom);
     ler_valorCom(comanda->valor);
+    comanda->status = 'a';
     printf("|=====|                                                      |=====|\n");
     printf("|==================================================================|\n");
     printf("\n");
     printf("\t >>>  Pressione <ENTER> para continuar  <<<");
     getchar();
     return comanda;
+}
+
+
+Comanda* buscarComanda(void) {
+    FILE* fpCom;
+    Comanda* comanda;
+    char idcomanda[6];
+
+    system("clear||cls");
+    printf("|==================================================================|\n");
+    printf("|===============|          Buscar Comanda          |===============|\n");
+    printf("|==================================================================|\n");
+    printf("|=====|                                                      |=====|\n");
+    printf("|=====|               Insira o ID da Comanda: ");
+    scanf("%s", idcomanda);
+    getchar();
+    comanda =  (Comanda*) malloc(sizeof(Comanda));
+    fpCom = fopen("comanda.dat", "rb");
+    if (fpCom == NULL) {
+        printf("Erro na abertura do arquivo!\n");
+        printf("Não é possível continuar!\n");
+        exit(1);
+    }
+    while (!feof(fpCom)) {
+        fread(comanda, sizeof(Comanda), 1, fpCom);
+        if((strcmp(comanda->idcomanda, idcomanda) == 0) && (comanda->status != 'i')){
+            fclose(fpCom);
+            return comanda;
+        }
+    }
+    fclose(fpCom);
+    return NULL;
 }
 
 
