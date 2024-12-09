@@ -104,21 +104,31 @@ Comanda* buscarComanda(void) {
 
 void exibir_comanda(void) {
     Comanda* comanda;
-
-    system("clear||cls");
-    printf("\n");
-    printf("|==================================================================|\n");
-    printf("|===============|          Exibir Comanda          |===============|\n");
-    printf("|==================================================================|\n");
-    printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID da Comanda: ");
-    scanf("%[0-9]", comanda->idcomanda);
-    getchar();
-    printf("|=====|                                                      |=====|\n");
-    printf("|==================================================================|\n");
-    printf("\n");
-    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
-    getchar();
+    comanda = buscarComanda();
+    if((comanda == NULL) || (comanda->status == 'i')) {
+        printf("|=====|\n");
+        printf("|=====| A comanda não existe!\n");
+        printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+        getchar();
+    } else {
+        system("clear||cls");
+        printf("\n");
+        printf("|==================================================================|\n");
+        printf("|===============|          Exibir Comanda          |===============|\n");
+        printf("|==================================================================|\n");
+        printf("|=====|                                                      |=====|\n");
+        printf("|=====|               Data: %s\n", comanda->data);
+        printf("|=====|               Validade: %s\n", comanda->hora);
+        printf("|=====|               Mesa: %s\n", comanda->mesa);
+        printf("|=====|               ID do Garçom: %s\n", comanda->idgarcom);
+        printf("|=====|               Valor: %s\n", comanda->valor);
+        printf("|=====|                                                      |=====|\n");
+        printf("|==================================================================|\n");
+        printf("\n");
+        printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+        getchar();
+    }
+    free(comanda);
 }
 
 
