@@ -133,22 +133,60 @@ void exibir_comanda(void) {
 
 
 void alterar_comanda(void) {
+    FILE* fpCom;
     Comanda* comanda;
+    Comanda* comandaLido = buscarComanda();
+    int achou = 0;
 
-    system("clear||cls");
-    printf("\n");
-    printf("|==================================================================|\n");
-    printf("|===============|          Alterar Comanda         |===============|\n");
-    printf("|==================================================================|\n");
-    printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID da Comanda: ");
-    scanf("%[0-9]", comanda->idcomanda);
-    getchar();
-    printf("|=====|                                                      |=====|\n");
-    printf("|==================================================================|\n");
-    printf("\n");
-    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
-    getchar();
+    if(comandaLido == NULL){
+        printf("|=====|\n");
+        printf("|=====| A Comanda não existe!\n");
+        printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+        getchar();
+    } else {
+        comanda = (Comanda*) malloc(sizeof(Comanda));
+        fpCom = fopen("estoque.dat", "r+b");
+        if (fpCom == NULL) {
+            printf("Erro na abertura do arquivo!\n");
+            printf("Não é possível continuar!\n");
+            exit(1);
+        }
+    }
+
+    while(!feof(fpCom)) {
+        fread(comanda, sizeof(Comanda), 1, fpCom);
+        if (strcmp(comanda->idcomanda, comandaLido->idcomanda) == 0 && comanda->status != 'i') {
+            achou = 1;
+            system("clear||cls");
+            printf("|==================================================================|\n");
+            printf("|===============|          Alterar Comanda         |===============|\n");
+            printf("|==================================================================|\n");
+            printf("|=====|                                                      |=====|\n");
+            printf("|=====|                 Insira os novos dados:               |=====|\n");
+            ler_idcom(comanda->idcomanda);
+            ler_dataCom(comanda->data);
+            ler_hora(comanda->hora);
+            ler_mesa(comanda->mesa);
+            ler_idgarCom(comanda->idgarcom);
+            ler_valorCom(comanda->valor);
+            fseek(fpCom, -1*sizeof(Comanda), SEEK_CUR);
+            fwrite(comanda, sizeof(Comanda), 1, fpCom);
+            printf("|=====|\n");
+            printf("|=====| A comanda foi alterada!\n");
+            printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+            getchar();
+            break;
+        }
+    }
+    if(!achou){
+        printf("\n|=====| Comanda não encontrada!\n");
+        printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+        getchar();
+    }
+
+    fclose(fpCom);
+    free(comanda);
+    free(comandaLido);
 }
 
 
