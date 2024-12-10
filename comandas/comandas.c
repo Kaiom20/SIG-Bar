@@ -145,7 +145,7 @@ void alterar_comanda(void) {
         getchar();
     } else {
         comanda = (Comanda*) malloc(sizeof(Comanda));
-        fpCom = fopen("estoque.dat", "r+b");
+        fpCom = fopen("comanda.dat", "r+b");
         if (fpCom == NULL) {
             printf("Erro na abertura do arquivo!\n");
             printf("Não é possível continuar!\n");
@@ -191,20 +191,45 @@ void alterar_comanda(void) {
 
 
 void excluir_comanda(void) {
+    FILE* fpCom;
     Comanda* comanda;
+    Comanda* comandaLido = buscarComanda();
+    int achou = 0;
 
-    system("clear||cls");
-    printf("\n");
-    printf("|==================================================================|\n");
-    printf("|===============|          Excluir Comanda         |===============|\n");
-    printf("|==================================================================|\n");
-    printf("|=====|                                                      |=====|\n");
-    printf("|=====|               ID da Comanda: ");
-    scanf("%[0-9]", comanda->idcomanda);
-    getchar();
-    printf("|=====|                                                      |=====|\n");
-    printf("|==================================================================|\n");
-    printf("\n");
-    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
-    getchar();
+    if(comandaLido == NULL) {
+        printf("|=====|\n");
+        printf("|=====| A comanda não existe!\n");
+        printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+        getchar();
+    } else {
+        comanda = (Comanda*) malloc(sizeof(Comanda));
+        fpCom = fopen("comanda.dat", "r+b");
+        if (fpCom == NULL) {
+            printf("Erro na abertura do arquivo!\n");
+            printf("Não é possível continuar!\n");
+            exit(1);
+        }
+
+    while(!feof(fpCom)) {
+        fread(comanda, sizeof(Comanda), 1, fpCom);
+        if (strcmp(comanda->idcomanda, comandaLido->idcomanda) == 0 && comanda->status != 'i'){
+            achou = 1;
+            comanda->status = 'i';
+            fseek(fpCom, -1*sizeof(comanda), SEEK_CUR);
+            fwrite(comanda, sizeof(Comanda), 1, fpCom);
+            printf("|=====|\n");
+            printf("|=====| A comanda foi excluído!\n");
+            printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+            getchar();
+        }
+    }
+    if(!achou) {
+        printf("\n|=====| Comanda não encontrado!\n");
+        printf("\t >>>  Pressione <ENTER> para continuar  <<<");
+        getchar();
+    }
+    fclose(fpCom);
+    free(comanda);
+    free(comandaLido);
+    }
 }
