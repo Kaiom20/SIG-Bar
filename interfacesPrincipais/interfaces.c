@@ -35,11 +35,11 @@ void info(void) {
     printf("|========================================================================================|\n");
     printf("|=====|                                                                            |=====|\n");
     printf("|=====|          Projeto de um Sistema de Gestão para um Bar e Restaurante         |=====|\n");
-    printf("|=====|                      Sistemas de Informação / UFRN                         |=====|\n");
-    printf("|=====|                      Disciplina: Programação                               |=====|\n");
-    printf("|=====|                      Professor: Flavius da Luz e Gorgônio                  |=====|\n");
+    printf("|=====|                        Sistemas de Informação / UFRN                       |=====|\n");
+    printf("|=====|                           Disciplina: Programação                          |=====|\n");
+    printf("|=====|                    Professor: Flavius da Luz e Gorgônio                    |=====|\n");
     printf("|=====|                                                                            |=====|\n");
-    printf("|=====|             Projeto em desenvolvimento por:                                |=====|\n");
+    printf("|=====|                    Projeto em desenvolvimento por:                         |=====|\n");
     printf("|=====|                                                                            |=====|\n");
     printf("|=====|                    Kaio Márcio Araújo Cavalcante Lira                      |=====|\n");
     printf("|=====|                    E-mail: kaio.lira.080@ufrn.edu.br                       |=====|\n");
