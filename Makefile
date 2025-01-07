@@ -7,13 +7,13 @@ CC := gcc
 CFLAGS := -Wall -Wextra -pedantic
 
 # Source files
-SRCS := main.c comandas/comandas.c comandas/ler_comandas.c estoque/estoque.c estoque/moduloE.c garcom/garcom.c garcom/moduloG.c relatorio/relatorio.c validadores/valida.c garcom/ler_garcom.c estoque/ler_estoque.c interfacesPrincipais/interfaces.c comandas/moduloC.c relatorio/moduloR.c
+SRCS := main.c comandas/comandas.c comandas/ler_comandas.c estoque/estoque.c estoque/moduloE.c garcom/garcom.c garcom/moduloG.c relatorio/relatorio.c validadores/valida.c garcom/ler_garcom.c estoque/ler_estoque.c interfacesPrincipais/interfaces.c comandas/moduloC.c relatorio/moduloR.c relatorio/relComandas.c
 
 # Object files
 OBJS := $(SRCS:.c=.o)
 
 # Header files
-HDRS := comandas/comandas.h comandas/ler_comandas.h estoque/estoque.h estoque/moduloE.h garcom/garcom.h garcom/moduloG.h relatorio/relatorio.h validadores/valida.h garcom/ler_garcom.h estoque/ler_estoque.h interfacesPrincipais/interfaces.h comandas/moduloC.h relatorio/moduloR.h
+HDRS := comandas/comandas.h comandas/ler_comandas.h estoque/estoque.h estoque/moduloE.h garcom/garcom.h garcom/moduloG.h relatorio/relatorio.h validadores/valida.h garcom/ler_garcom.h estoque/ler_estoque.h interfacesPrincipais/interfaces.h comandas/moduloC.h relatorio/moduloR.h relatorio/relComandas.h
 
 # Executable name
 TARGET := main
