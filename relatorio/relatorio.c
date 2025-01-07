@@ -25,16 +25,7 @@ char menu_relatorios(void) {
 }
 
 
-void relatorio_estoque(void) {          //sem funcionalidade no momento
-    system("clear||cls");
-    printf("\n");
-    printf("|=====================================================================|\n");
-    printf("|===============|          Relatório Estoque          |===============|\n");
-    printf("|=====================================================================|\n");
-    printf("\n");
-    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
-    getchar();
-}
+
 
 
 void relatorio_garcom(void) {          //sem funcionalidade no momento
