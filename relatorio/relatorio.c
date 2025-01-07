@@ -25,18 +25,6 @@ char menu_relatorios(void) {
 }
 
 
-void relatorio_comandas(void) {          //sem funcionalidade no momento
-    system("clear||cls");
-    printf("\n");
-    printf("|=====================================================================|\n");
-    printf("|===============|          Relatório Comandas         |===============|\n");
-    printf("|=====================================================================|\n");
-    printf("\n");
-    printf("\t >>>  Pressione <ENTER> para continuar  <<<");
-    getchar();
-}
-
-
 void relatorio_estoque(void) {          //sem funcionalidade no momento
     system("clear||cls");
     printf("\n");
