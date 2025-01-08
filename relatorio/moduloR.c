@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "moduloR.h"
 #include "relatorio.h"
+#include "relComandas.h"
+#include "relEstoque.h"
+#include "relEstoque.h"
 
 void modulo_relatorio(void) {
 

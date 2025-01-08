@@ -6,6 +6,4 @@
 void modulo_relatorio(void);
 char menu_relatorios(void);
 
-void relatorio_garcom(void);
-
 #endif

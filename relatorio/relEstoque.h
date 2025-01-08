@@ -1,4 +1,4 @@
-// Assinatura das funções do relatório das comandas
+// Assinatura das funções do relatório do estoque
 
 #ifndef RELESTOQUE
 #define RELESTOQUE
