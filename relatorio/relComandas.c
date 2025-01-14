@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "relComandas.h"
+#include "../comandas/comandas.h"
 
 // Funções
 
