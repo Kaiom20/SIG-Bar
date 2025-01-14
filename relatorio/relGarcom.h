@@ -3,6 +3,8 @@
 #ifndef RELGARCOM
 #define RELGARCOM
 
-void relatorio_garcom(void);
+void modulo_relGarcom(void);
+char menu_relGarcom(void);
+void relGarcom_geral(void);
 
 #endif
