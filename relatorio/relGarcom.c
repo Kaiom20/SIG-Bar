@@ -15,11 +15,13 @@ void modulo_relGarcom(void) {
         switch(opcao) {
             case '1': relGarcom_geral();
                         break;
+            case '2': relGarcom_ativos();
+                        break;
+            case '3': relGarcom_inativos();
+                        break;
         }
-
+        
     } while (opcao != '0');
-    
-
 }
 
 char menu_relGarcom(void) {
@@ -63,7 +65,7 @@ void relGarcom_geral(void) {
     printf("|===============|           Relatório Geral           |===============|\n");
     printf("|===============|                                     |===============|\n");
     printf("|=====================================================================|\n");
-    while (fread(garcom, sizeof(Garcom), 1, fpGarc)){
+    while (fread(garcom, sizeof(Garcom), 1, fpGarc)) {
         printf("\n |===== ID: %s\n", garcom->id_garcom);
         printf("\n");
         printf("\n |===== Nome: %s\n", garcom->nome);
@@ -82,12 +84,77 @@ void relGarcom_geral(void) {
 }
 
 
+void relGarcom_ativos(void) {
+    FILE* fpGarc;
+    Garcom* garcom;
+
+    fpGarc = fopen("garcom.dat", "rb");
+    if (fpGarc == NULL) {
+        printf("Erro na abertura do arquivo!\n");
+        printf("Não é possível continuar...\n");
+        exit(1);
+    }
+    garcom = (Garcom*)malloc(sizeof(Garcom));
+    system("clear || cls"); // se for Linux use 'clear' se for Windows use 'cls'
+    printf("\n");
+    printf("|==============================================================================|\n");
+    printf("|===============|                                              |===============|\n");
+    printf("|===============|            Relatório Garçons Ativos          |===============|\n");
+    printf("|===============|                                              |===============|\n");
+    printf("|==============================================================================|\n");
+    while (fread(garcom, sizeof(Garcom), 1, fpGarc)) {
+        if (garcom->status != 'i') {
+            printf("\n |===== ID: %s\n", garcom->id_garcom);
+            printf("\n");
+            printf("\n |===== Nome: %s\n", garcom->nome);
+            printf("\n");
+            printf("\n |===== CPF: %s\n", garcom->cpf);
+            printf("\n");
+            printf("\n |===== Telefone: %s\n", garcom->telefone);
+            printf("\n");
+            printf("\n |===== Data de Nascimento: %s\n", garcom->nasc);
+        }
+    }
+    free(garcom);
+    printf("\n");
+    printf("tecle <ENTER> para continuar... ");
+    getchar();
+}
 
 
+void relGarcom_inativos(void) {
+    FILE* fpGarc;
+    Garcom* garcom;
 
-
-
-
-
-
-
+    fpGarc = fopen("garcom.dat", "rb");
+    if (fpGarc == NULL) {
+        printf("Erro na abertura do arquivo!\n");
+        printf("Não é possível continuar...\n");
+        exit(1);
+    }
+    garcom = (Garcom*)malloc(sizeof(Garcom));
+    system("clear || cls"); // se for Linux use 'clear' se for Windows use 'cls'
+    printf("\n");
+    printf("|==============================================================================|\n");
+    printf("|===============|                                              |===============|\n");
+    printf("|===============|          Relatório Garçons Inativos          |===============|\n");
+    printf("|===============|                                              |===============|\n");
+    printf("|==============================================================================|\n");
+    while (fread(garcom, sizeof(Garcom), 1, fpGarc)) {
+        if (garcom->status == 'i') {
+            printf("\n |===== ID: %s\n", garcom->id_garcom);
+            printf("\n");
+            printf("\n |===== Nome: %s\n", garcom->nome);
+            printf("\n");
+            printf("\n |===== CPF: %s\n", garcom->cpf);
+            printf("\n");
+            printf("\n |===== Telefone: %s\n", garcom->telefone);
+            printf("\n");
+            printf("\n |===== Data de Nascimento: %s\n", garcom->nasc);
+        }
+    }
+    free(garcom);
+    printf("\n");
+    printf("tecle <ENTER> para continuar... ");
+    getchar();
+}
