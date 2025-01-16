@@ -15,7 +15,7 @@ void modulo_relatorio(void) {
         switch(opcao) {
             case '1': relatorio_comandas();
                         break;              
-            case '2': relatorio_estoque();
+            case '2': menu_relEstoque();
                         break;
             case '3': modulo_relGarcom();
                         break;
