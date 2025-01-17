@@ -13,7 +13,7 @@ void modulo_relatorio(void) {
         opcao = menu_relatorios();
 
         switch(opcao) {
-            case '1': relatorio_comandas();
+            case '1': menu_relComandas();
                         break;              
             case '2': menu_relEstoque();
                         break;
