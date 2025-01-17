@@ -5,5 +5,6 @@
 
 void modulo_relComandas(void);
 char menu_relComandas(void);
+void relComandas_geral(void);
 
 #endif
