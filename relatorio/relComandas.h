@@ -3,6 +3,7 @@
 #ifndef RELCOMANDAS
 #define RELCOMANDAS
 
-void relatorio_comandas(void);
+void modulo_relComandas(void);
+char menu_relComandas(void);
 
 #endif
