@@ -15,8 +15,12 @@ void modulo_relComandas(void) {
         switch(opcao) {
             case '1': relComandas_geral();
                         break;
+            case '2': relComandas_ativas();
+                        break;
+            case '3': relComandas_inativas();
+                        break;
         }
-
+        
     } while (opcao != '0');
 }
 
