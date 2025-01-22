@@ -85,6 +85,8 @@ Esse projeto foi desenvolvido com o seguinte editor de código:
 | Desenvolvedor | Kaio Marcio |
 | Desenvolvedor | Fillipe Medeiros |
 | Desenvolvedor | Diêgo Axel |
+| Desenvolvedor | Luís Henrique |
+
 
 ## Contate-nos
 
@@ -105,6 +107,12 @@ Esse projeto foi desenvolvido com o seguinte editor de código:
 | GitHub | Linkedin | Instagram | Portifólio | E-mail | Celular |
 | ------ | ------ | ------ | ------ | ------ | ------ |
 | [Diego-Axel](https://github.com/Diego-Axel) | [Diêgo Axel](https://www.linkedin.com/in/di%C3%AAgo-axel-1684452b5/) | [Axel](https://www.instagram.com/diegoaxelbsr/) | [Diêgo_Dev](https://diego-axel.github.io/) | diegoaxelbsr@gmail.com | (84) 99977-4459 |
+
+### Luís Henrique ->
+
+| GitHub | Linkedin | Instagram | Portifólio | E-mail | Celular |
+| ------ | ------ | ------ | ------ | ------ | ------ |
+| [Luís-H.](https://github.com/Luis27h) | [Luís-H.](https://www.linkedin.com/in/luis-henrique-de-almeida-marciano-026b1632b/) | [Luís H.](https://www.instagram.com/luis_h_27/) | Null | luis27marciano@gmail.com | (84) 99627-4880 |
 
 ##  Sobre
 
