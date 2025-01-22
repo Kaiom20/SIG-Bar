@@ -56,6 +56,11 @@ void info(void) {
     printf("|=====|                    Instagram: @diegoaxelbsr                                |=====|\n");
     printf("|=====|                    Git: https://github.com/Diego-Axel                      |=====|\n");
     printf("|=====|                                                                            |=====|\n");
+    printf("|=====|                    Luís Henrique de Almeida Marciano                       |=====|\n");
+    printf("|=====|                    E-mail: luis27marciano@gmail.com                        |=====|\n");
+    printf("|=====|                    Instagram: @luis_h_27                                   |=====|\n");
+    printf("|=====|                    Git: https://github.com/Luis27h                         |=====|\n");
+    printf("|=====|                                                                            |=====|\n");
     printf("|=====|                                               -- desde Set, 2024           |=====|\n");
     printf("|========================================================================================|\n");
     printf("|=====|                                                                            |=====|\n");
