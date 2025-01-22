@@ -113,6 +113,7 @@ void relGarcom_ativos(void) {
             printf("\n |===== Telefone: %s\n", garcom->telefone);
             printf("\n");
             printf("\n |===== Data de Nascimento: %s\n", garcom->nasc);
+            printf("|=====================================================================|\n");
         }
     }
     free(garcom);
@@ -151,6 +152,7 @@ void relGarcom_inativos(void) {
             printf("\n |===== Telefone: %s\n", garcom->telefone);
             printf("\n");
             printf("\n |===== Data de Nascimento: %s\n", garcom->nasc);
+            printf("|=====================================================================|\n");
         }
     }
     free(garcom);
@@ -203,3 +205,26 @@ Lista* lista_ordenada(void) { //Créditos: Fillipe, João Victor e ChatGPT.
     fclose(fpGarc);
     return 1;
 }
+
+
+void imprime_lista(Lista* l){
+    if (l == NULL) {
+        printf("\tNão existem clientes cadastrados!\n");
+        printf("\tTecle <ENTER> para prosseguir... ");
+        getchar();
+        return;
+    }
+    while(l != NULL) {
+        printf("\n |===== ID: %s\n", l->garcom->id_garcom);
+        printf("\n");
+        printf("\n |===== Nome: %s\n", l->garcom->nome);
+        printf("\n");
+        printf("\n |===== CPF: %s\n", l->garcom->cpf);
+        printf("\n");
+        printf("\n |===== Telefone: %s\n", l->garcom->telefone);
+        printf("\n");
+        printf("\n |===== Data de Nascimento: %s\n", l->garcom->nasc);
+        printf("|=====================================================================|\n");
+        l = l->prox;
+    }
+} 
