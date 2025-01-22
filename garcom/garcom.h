@@ -14,6 +14,13 @@ struct garcom {
     char status;
 };
 
+typedef struct lista Lista;
+
+struct lista {
+    Garcom* garcom;
+    Lista* prox;
+};
+
 char menu_garcom(void);
 void cadastrar_garcom(void);
 void exibir_garcom(void);
