@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "relGarcom.h"
 #include "../garcom/garcom.h"
 
@@ -206,7 +207,7 @@ Lista* lista_ordenada(void) { //Créditos: Fillipe, João Victor e ChatGPT.
         }
     }
     fclose(fpGarc);
-    return 1;
+    return l;
 }
 
 

@@ -1,4 +1,5 @@
 #include <stdio.h> 
+#include <string.h>
 #include "moduloE.h"
 #include "estoque.h"
 

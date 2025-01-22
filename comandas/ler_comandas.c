@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "ler_comandas.h"
 #include "../validadores/valida.h"
 

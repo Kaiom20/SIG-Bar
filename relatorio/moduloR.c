@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "moduloR.h"
 #include "relatorio.h"
 #include "relComandas.h"
