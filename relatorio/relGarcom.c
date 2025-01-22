@@ -227,4 +227,15 @@ void imprime_lista(Lista* l){
         printf("|=====================================================================|\n");
         l = l->prox;
     }
-} 
+}
+
+
+void limpa_lista(Lista* l) { //Créditos: Flavius Gorgônio || @flgorgonio
+    Lista *p = l;
+    while(p != NULL) {
+        Lista *t = p->prox;
+        free(p->garcom);
+        free(p);
+        p = t;
+    }
+}
