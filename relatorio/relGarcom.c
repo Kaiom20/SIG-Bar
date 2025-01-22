@@ -39,6 +39,7 @@ char menu_relGarcom(void) {
     printf("|=====|                      [1] Relatório Geral                      |=====|\n");
     printf("|=====|                      [2] Garçons Ativos                       |=====|\n");
     printf("|=====|                      [3] Garçons Inativos                     |=====|\n");
+    printf("|=====|                      [4] Garçons (Ordem Alfabética)           |=====|\n");
     printf("|=====|                      [0] Retornar ao Menu Relatório           |=====|\n");
     printf("|=====|                                                               |=====|\n");
     printf("|===========================================================================|\n");
