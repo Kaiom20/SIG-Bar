@@ -19,6 +19,8 @@ void modulo_relGarcom(void) {
                         break;
             case '3': relGarcom_inativos();
                         break;
+            case '4': relGarcom_ordenado();
+                        break;
         }
         
     } while (opcao != '0');
@@ -238,4 +240,22 @@ void limpa_lista(Lista* l) { //Créditos: Flavius Gorgônio || @flgorgonio
         free(p);
         p = t;
     }
+}
+
+
+void relGarcom_ordenado(void) {
+    system("clear || cls"); // se for Linux use 'clear' se for Windows use 'cls'
+    printf("\n");
+    printf("|==============================================================================|\n");
+    printf("|===============|                                              |===============|\n");
+    printf("|===============|               Relatório Garçons              |===============|\n");
+    printf("|===============|                Ordem Alfabética              |===============|\n");
+    printf("|===============|                                              |===============|\n");
+    printf("|==============================================================================|\n");
+    Lista* l = lista_ordenada();
+    imprime_lista(l);
+    limpa_lista(l);
+    printf("\n");
+    printf("tecle <ENTER> para continuar... ");
+    getchar();
 }

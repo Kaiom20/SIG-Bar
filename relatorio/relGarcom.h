@@ -11,6 +11,7 @@ void relGarcom_ativos(void);
 void relGarcom_inativos(void);
 Lista* lista_ordenada(void);
 void imprime_lista(Lista* l);
-void limpa_lista(Lista* l)
+void limpa_lista(Lista* l);
+void relGarcom_ordenado(void);
 
 #endif
