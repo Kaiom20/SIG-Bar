@@ -158,3 +158,48 @@ void relGarcom_inativos(void) {
     printf("tecle <ENTER> para continuar... ");
     getchar();
 }
+
+
+Lista* lista_ordenada(void) { //Créditos: Fillipe, João Victor e ChatGPT.
+    FILE* fpGarc;
+    Garcom* garcom;
+    Lista* novo;
+    Lista* l = NULL;
+
+    fpGarc = fopen("garcom.dat", "rb");
+    if (fpGarc == NULL) {
+        printf("Erro na abertura do arquivo!\n");
+        printf("Não é possível continuar...\n");
+        exit(1);
+    }
+
+    while (1) {
+        garcom = (Garcom*)malloc(sizeof(Garcom));
+        if (fread(garcom, sizeof(Garcom), 1, fpGarc) != 1) {
+            free(garcom);
+            break;
+        }
+
+        novo = (Lista*)malloc(sizeof(Lista));
+        novo->garcom = garcom;
+        novo->prox = NULL;
+
+        if (l == NULL) {
+            l = novo;
+        } else if (strcmp(novo->garcom->nome, l->garcom->nome) < 0) {
+            novo->prox = l;
+            l = novo;
+        } else {
+            Lista* ant = l;
+            Lista* atu = l->prox;
+            while ((atu != NULL) && (strcmp(novo->garcom->nome, atu->garcom->nome) > 0)) {
+                ant = atu;
+                atu = atu->prox;
+            }
+            ant->prox = novo;
+            novo->prox = atu;
+        }
+    }
+    fclose(fpGarc);
+    return 1;
+}
