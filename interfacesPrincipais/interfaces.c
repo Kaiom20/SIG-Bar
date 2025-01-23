@@ -6,6 +6,7 @@
 
 char menu_principal(void) {
     char opc;
+    system("clear || cls"); // se for Linux use 'clear' se for Windows use 'cls'
     printf("\n");
     printf("|==================================================================|\n");
     printf("|===============|          Menu Principal          |===============|\n");
