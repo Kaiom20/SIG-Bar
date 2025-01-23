@@ -140,5 +140,6 @@ void E_inativos(void) {
 
 
     printf("*** Relatório de Estoque Inativo (SEM INATIVOS NO MOMENTO) ***\n");
+    printf("\n>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
