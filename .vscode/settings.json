@@ -2,6 +2,10 @@
     "files.associations": {
         "ler_garcom.h": "c",
         "valida.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "relestoque.h": "c",
+        "estoque.h": "c",
+        "string.h": "c",
+        "relatorio_estoque.h": "c"
     }
 }

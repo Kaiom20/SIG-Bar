@@ -3,11 +3,10 @@
 #include "moduloR.h"
 #include "relatorio.h"
 #include "relComandas.h"
-#include "relEstoque.h"
 #include "relGarcom.h"
+#include "relatorio_estoque.h"
 
 void modulo_relatorio(void) {
-
     char opcao;
 
     do {
@@ -15,11 +14,11 @@ void modulo_relatorio(void) {
 
         switch(opcao) {
             case '1': menu_relComandas();
-                        break;              
-            case '2': menu_relEstoque();
-                        break;
+                      break;
+            case '2': relatorio_estoque();
+                      break;
             case '3': modulo_relGarcom();
-                        break;
+                      break;
         }
 
     } while (opcao != '0');

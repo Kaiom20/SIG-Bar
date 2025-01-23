@@ -1,48 +1,20 @@
-# Makefile
+CC = gcc
+CFLAGS = -Wall
+SRC = main.c $(wildcard comandas/*.c) $(wildcard estoque/*.c) $(wildcard garcom/*.c) $(wildcard interfacesPrincipais/*.c) $(wildcard relatorio/*.c) $(wildcard validadores/*.c)
+OBJ = $(SRC:.c=.o)
+EXEC = main.exe
 
-# Compiler
-CC := gcc
+# Regra padrão: compilar o programa
+all: $(EXEC)
 
-# Compiler flags
-CFLAGS := -Wall -Wextra -pedantic
+# Regras para gerar o executável
+$(EXEC): $(OBJ)
+	$(CC) $(CFLAGS) -o $@ $^
 
-# Source files
-SRCS := main.c comandas/comandas.c comandas/ler_comandas.c estoque/estoque.c estoque/moduloE.c garcom/garcom.c garcom/moduloG.c relatorio/relatorio.c validadores/valida.c garcom/ler_garcom.c estoque/ler_estoque.c interfacesPrincipais/interfaces.c comandas/moduloC.c relatorio/moduloR.c relatorio/relComandas.c relatorio/relEstoque.c relatorio/relGarcom.c
-
-# Object files
-OBJS := $(SRCS:.c=.o)
-
-# Header files
-HDRS := comandas/comandas.h comandas/ler_comandas.h estoque/estoque.h estoque/moduloE.h garcom/garcom.h garcom/moduloG.h relatorio/relatorio.h validadores/valida.h garcom/ler_garcom.h estoque/ler_estoque.h interfacesPrincipais/interfaces.h comandas/moduloC.h relatorio/moduloR.h relatorio/relComandas.h relatorio/relEstoque.h relatorio/relGarcom.h
-
-# Executable name
-TARGET := main
-
-# Windows-specific settings
-ifeq ($(OS),Windows_NT)
-    RM := del /Q
-    TARGET := $(TARGET).exe
-else
-    RM := rm -f
-endif
-
-# Default target
-all: $(TARGET)
-
-# Compile object files
-%.o: %.c $(HDRS)
+# Regras para compilar os arquivos .c em .o
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Link object files to create executable
-$(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) $^ -o $@
-
-# Run the executable
-run: $(TARGET)
-	./$(TARGET)
-
-# Clean up object files and executable
+# Regra para limpar os arquivos gerados
 clean:
-	$(RM) $(OBJS) $(TARGET)
-
-# Reference: https://github.com/Lleusxam/c-recipes/blob/main/makefile
+	rm -f $(OBJ) $(EXEC)
