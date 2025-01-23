@@ -6,6 +6,7 @@
         "relestoque.h": "c",
         "estoque.h": "c",
         "string.h": "c",
-        "relatorio_estoque.h": "c"
+        "relatorio_estoque.h": "c",
+        "relcomandas.h": "c"
     }
 }

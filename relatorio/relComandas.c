@@ -4,160 +4,138 @@
 #include "relComandas.h"
 #include "../comandas/comandas.h"
 
-// Funções
-
-void modulo_relComandas(void) {
-
-    char opcao;
-
+void relatorio_comanda(void) {
+    char op;
     do {
-        opcao = menu_relComandas();
-
-        switch(opcao) {
-            case '1': relComandas_geral();
-                        break;
-            case '2': relComandas_ativas();
-                        break;
-            case '3': relComandas_inativas();
-                        break;
-        }
-        
-    } while (opcao != '0');
+        op = menu_relatorio_comanda();
+        switch(op) {
+            case '1': C_geral();
+                      break;
+            case '2': C_ativos();
+                      break;
+            case '3': C_inativos();
+                      break;
+        }         
+    } while (op != '0');
 }
 
-char menu_relComandas(void) {
-
-    char op_relatorio;
-
-    system("clear || cls"); // se for Linux use 'clear' se for Windows use 'cls'
-    printf("\n");
-    printf("|===========================================================================|\n");
-    printf("|===============|         Menu Relatórios De Comandas       |===============|\n");
-    printf("|===========================================================================|\n");
-    printf("|=====|                                                               |=====|\n");
-    printf("|=====|                     [1] Relatório Geral                       |=====|\n");
-    printf("|=====|                     [2] Comandas Ativas                       |=====|\n");
-    printf("|=====|                     [3] Comandas Inativas                     |=====|\n");
-    printf("|=====|                     [0] Retornar ao Menu Relatório            |=====|\n");
-    printf("|=====|                                                               |=====|\n");
-    printf("|===========================================================================|\n");
-    printf("|=====| Escolha uma opção: ");
-    scanf("%c", &op_relatorio);
+char menu_relatorio_comanda(void) {
+    char op;
+    printf("*******************************************************************************\n");
+    printf("***                - - - - Menu Relatorio Comanda- - - -                    ***\n");
+    printf("***         1 - Relatorio Geral                                             ***\n");
+    printf("***         2 - Ativos                                                      ***\n");
+    printf("***         3 - Inativos                                                    ***\n");
+    printf("***         0 - Sair                                                        ***\n");
+    printf("*******************************************************************************\n");
+    scanf("%c", &op);
     getchar();
-    return op_relatorio;
+    return op;
 }
 
-
-void relComandas_geral(void) {
-    FILE* fpCom;
+void C_geral(void) {
+   
     Comanda* comanda;
+    comanda = (Comanda*) malloc(sizeof(Comanda)); 
+    FILE* fp;
+    fp = fopen("comanda.dat", "rb");
 
-    fpCom = fopen("comanda.dat", "rb");
-    if (fpCom == NULL) {
-        printf("Erro na abertura do arquivo!\n");
-        printf("Não é possível continuar...\n");
-        exit(1);
-    }
-    comanda = (Comanda*)malloc(sizeof(Comanda));
-    system("clear || cls"); // se for Linux use 'clear' se for Windows use 'cls'
-    printf("\n");
-    printf("|=====================================================================|\n");
-    printf("|===============|                                     |===============|\n");
-    printf("|===============|           Relatório Geral           |===============|\n");
-    printf("|===============|                                     |===============|\n");
-    printf("|=====================================================================|\n");
-    while (fread(comanda, sizeof(Comanda), 1, fpCom)) {
-        printf("\n |===== ID da Comanda: %s\n", comanda->idcomanda);
-        printf("\n");
-        printf("\n |===== Mesa: %s\n", comanda->mesa);
-        printf("\n");
-        printf("\n |===== Data: %s\n", comanda->data);
-        printf("\n");
-        printf("\n |===== Valor R$: %s\n", comanda->valor);
-        printf("\n");
-        printf("\n |===== ID Garçom: %s\n", comanda->idgarcom);
-        printf("|=====================================================================|\n");
+    printf("*******************************************************************************\n");
+    printf("***                                                                         ***\n");
+    printf("***              - - - - Relatório Geral de Comanda - - - -                 ***\n");
+    printf("***                                                                         ***\n");
+    printf("*******************************************************************************\n");
+
+    while(fread(comanda, sizeof(Comanda), 1, fp)) { 
+        printf("*******************************************************************************\n");
+        printf("***                                                                         ***\n");
+        printf("*** ID: %s                                                                  ***\n", comanda->idcomanda);  // Corrigido para %s
+        printf("*** Data: %s                                                                ***\n", comanda->data);
+        printf("*** Hora: %s                                                               ***\n", comanda->hora);
+        printf("*** Mesa: %s                                                          ***\n", comanda->mesa);  // Corrigido para %s
+        printf("*** Garcom: %s                                                               ***\n", comanda->idgarcom);
+        printf("*** Valor: %s                                                               ***\n", comanda->valor);
+        printf("*** status: %d                                                              ***\n", comanda->status);
+        printf("***                                                                         ***\n");
+        printf("*******************************************************************************\n");
     }
     free(comanda);
-    printf("\n");
-    printf("tecle <ENTER> para continuar... ");
+    fclose(fp);
+
+    printf("\n>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
 
 
-void relComandas_ativas(void) {
-    FILE* fpCom;
-    Comanda* comanda;
+void C_ativos(void) {
 
-    fpCom = fopen("comanda.dat", "rb");
-    if (fpCom == NULL) {
-        printf("Erro na abertura do arquivo!\n");
-        printf("Não é possível continuar...\n");
-        exit(1);
-    }
-    comanda = (Comanda*)malloc(sizeof(Comanda));
-    system("clear || cls"); // se for Linux use 'clear' se for Windows use 'cls'
-    printf("\n");
-    printf("|===============================================================================|\n");
-    printf("|===============|                                               |===============|\n");
-    printf("|===============|            Relatório Comandas Ativas          |===============|\n");
-    printf("|===============|                                               |===============|\n");
-    printf("|===============================================================================|\n");
-    while (fread(comanda, sizeof(Comanda), 1, fpCom)) {
-        if (comanda->status != 'i') {
-            printf("\n |===== ID da Comanda: %s\n", comanda->idcomanda);
-            printf("\n");
-            printf("\n |===== Mesa: %s\n", comanda->mesa);
-            printf("\n");
-            printf("\n |===== Data: %s\n", comanda->data);
-            printf("\n");
-            printf("\n |===== Valor R$: %s\n", comanda->valor);
-            printf("\n");
-            printf("\n |===== ID Garçom: %s\n", comanda->idgarcom);
-            printf("|=====================================================================|\n");
+      
+    Comanda* comanda;
+    comanda = (Comanda*) malloc(sizeof(Comanda)); 
+    FILE* fp;
+    fp = fopen("comanda.dat", "rb");
+
+    printf("*******************************************************************************\n");
+    printf("***                                                                         ***\n");
+    printf("***             - - - - Relatório  de Comandas Ativas- - - -                 ***\n");
+    printf("***                                                                         ***\n");
+    printf("*******************************************************************************\n");
+
+    while(fread(comanda, sizeof(Comanda), 1, fp)) { 
+        if( comanda->status == 'a'){
+        printf("*******************************************************************************\n");
+        printf("***                                                                         ***\n");
+        printf("*** ID: %s                                                                  ***\n", comanda->idcomanda);  // Corrigido para %s
+        printf("*** Data: %s                                                                ***\n", comanda->data);
+        printf("*** Hora: %s                                                               ***\n", comanda->hora);
+        printf("*** Mesa: %s                                                          ***\n", comanda->mesa);  // Corrigido para %s
+        printf("*** Garcom: %s                                                               ***\n", comanda->idgarcom);
+        printf("*** Valor: %s                                                               ***\n", comanda->valor);
+        printf("*** status: %d                                                              ***\n", comanda->status);
+        printf("***                                                                         ***\n");
+        printf("*******************************************************************************\n");
         }
     }
     free(comanda);
-    printf("\n");
-    printf("tecle <ENTER> para continuar... ");
+    fclose(fp);
+
+    printf("\n>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
 
 
-void relComandas_inativas(void) {
-    FILE* fpCom;
-    Comanda* comanda;
+void C_inativos(void) {
 
-    fpCom = fopen("comanda.dat", "rb");
-    if (fpCom == NULL) {
-        printf("Erro na abertura do arquivo!\n");
-        printf("Não é possível continuar...\n");
-        exit(1);
-    }
-    comanda = (Comanda*)malloc(sizeof(Comanda));
-    system("clear || cls"); // se for Linux use 'clear' se for Windows use 'cls'
-    printf("\n");
-    printf("|===============================================================================|\n");
-    printf("|===============|                                               |===============|\n");
-    printf("|===============|            Relatório Comandas Ativas          |===============|\n");
-    printf("|===============|                                               |===============|\n");
-    printf("|===============================================================================|\n");
-    while (fread(comanda, sizeof(Comanda), 1, fpCom)) {
-        if (comanda->status == 'i') {
-            printf("\n |===== ID da Comanda: %s\n", comanda->idcomanda);
-            printf("\n");
-            printf("\n |===== Mesa: %s\n", comanda->mesa);
-            printf("\n");
-            printf("\n |===== Data: %s\n", comanda->data);
-            printf("\n");
-            printf("\n |===== Valor R$: %s\n", comanda->valor);
-            printf("\n");
-            printf("\n |===== ID Garçom: %s\n", comanda->idgarcom);
-            printf("|=====================================================================|\n");
+     Comanda* comanda;
+    comanda = (Comanda*) malloc(sizeof(Comanda)); 
+    FILE* fp;
+    fp = fopen("comanda.dat", "rb");
+
+    printf("*******************************************************************************\n");
+    printf("***                                                                         ***\n");
+    printf("***             - - - - Relatório de Comandas Inativas  - - - -             ***\n");
+    printf("***                                                                         ***\n");
+    printf("*******************************************************************************\n");
+
+    while(fread(comanda, sizeof(Comanda), 1, fp)) { 
+        if( comanda->status == 'i'){
+        printf("*******************************************************************************\n");
+        printf("***                                                                         ***\n");
+        printf("*** ID: %s                                                                  ***\n", comanda->idcomanda);  // Corrigido para %s
+        printf("*** Data: %s                                                                ***\n", comanda->data);
+        printf("*** Hora: %s                                                               ***\n", comanda->hora);
+        printf("*** Mesa: %s                                                          ***\n", comanda->mesa);  // Corrigido para %s
+        printf("*** Garcom: %s                                                               ***\n", comanda->idgarcom);
+        printf("*** Valor: %s                                                               ***\n", comanda->valor);
+        printf("*** status: %d                                                              ***\n", comanda->status);
+        printf("***                                                                         ***\n");
+        printf("*******************************************************************************\n");
         }
     }
     free(comanda);
-    printf("\n");
-    printf("tecle <ENTER> para continuar... ");
+    fclose(fp);
+
+    printf("\n>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
+
