@@ -20,14 +20,16 @@ void relatorio_comanda(void) {
 }
 
 char menu_relatorio_comanda(void) {
+    system("clear || cls"); // se for Linux use 'clear' se for Windows use 'cls'
+    printf("\n");
     char op;
-    printf("*******************************************************************************\n");
-    printf("***                - - - - Menu Relatorio Comanda- - - -                    ***\n");
-    printf("***         1 - Relatorio Geral                                             ***\n");
-    printf("***         2 - Ativos                                                      ***\n");
-    printf("***         3 - Inativos                                                    ***\n");
-    printf("***         0 - Sair                                                        ***\n");
-    printf("*******************************************************************************\n");
+    printf("|===========================================================================|\n");
+    printf("***                - - - - Menu Relatorio Comanda- - - -                  ***\n");
+    printf("***                          1 - Relatorio Geral                          ***\n");
+    printf("***                          2 - Ativos                                   ***\n");
+    printf("***                          3 - Inativos                                 ***\n");
+    printf("***                          0 - Sair                                     ***\n");
+    printf("|===========================================================================|\n");
     scanf("%c", &op);
     getchar();
     return op;
@@ -40,24 +42,26 @@ void C_geral(void) {
     FILE* fp;
     fp = fopen("comanda.dat", "rb");
 
-    printf("*******************************************************************************\n");
-    printf("***                                                                         ***\n");
-    printf("***              - - - - Relatório Geral de Comanda - - - -                 ***\n");
-    printf("***                                                                         ***\n");
-    printf("*******************************************************************************\n");
+    system("clear || cls"); // se for Linux use 'clear' se for Windows use 'cls'
+    printf("\n");
+    printf("|===========================================================================|\n");
+    printf("***                                                                       ***\n");
+    printf("***              - - - - Relatório Geral de Comanda - - - -               ***\n");
+    printf("***                                                                       ***\n");
+    printf("|===========================================================================|\n");
 
-    while(fread(comanda, sizeof(Comanda), 1, fp)) { 
-        printf("*******************************************************************************\n");
-        printf("***                                                                         ***\n");
-        printf("*** ID: %s                                                                  ***\n", comanda->idcomanda);  // Corrigido para %s
-        printf("*** Data: %s                                                                ***\n", comanda->data);
-        printf("*** Hora: %s                                                               ***\n", comanda->hora);
-        printf("*** Mesa: %s                                                          ***\n", comanda->mesa);  // Corrigido para %s
-        printf("*** Garcom: %s                                                               ***\n", comanda->idgarcom);
-        printf("*** Valor: %s                                                               ***\n", comanda->valor);
-        printf("*** status: %d                                                              ***\n", comanda->status);
-        printf("***                                                                         ***\n");
-        printf("*******************************************************************************\n");
+    while(fread(comanda, sizeof(Comanda), 1, fp)) {
+        printf("\n"); 
+        printf("|===========================================================================|\n");
+        printf("***                                                                          \n");
+        printf("*** ID: %s                                                                   \n", comanda->idcomanda);
+        printf("*** Data: %s                                                                 \n", comanda->data);
+        printf("*** Hora: %s                                                                 \n", comanda->hora);
+        printf("*** Mesa: %s                                                                 \n", comanda->mesa);
+        printf("*** Garcom: %s                                                               \n", comanda->idgarcom);
+        printf("*** Valor: %s                                                                \n", comanda->valor);
+        printf("***                                                                          \n");
+        printf("|===========================================================================|\n");
     }
     free(comanda);
     fclose(fp);
@@ -75,6 +79,8 @@ void C_ativos(void) {
     FILE* fp;
     fp = fopen("comanda.dat", "rb");
 
+    system("clear || cls"); // se for Linux use 'clear' se for Windows use 'cls'
+    printf("\n");
     printf("*******************************************************************************\n");
     printf("***                                                                         ***\n");
     printf("***             - - - - Relatório  de Comandas Ativas- - - -                 ***\n");
@@ -83,17 +89,17 @@ void C_ativos(void) {
 
     while(fread(comanda, sizeof(Comanda), 1, fp)) { 
         if( comanda->status == 'a'){
-        printf("*******************************************************************************\n");
-        printf("***                                                                         ***\n");
-        printf("*** ID: %s                                                                  ***\n", comanda->idcomanda);  // Corrigido para %s
-        printf("*** Data: %s                                                                ***\n", comanda->data);
-        printf("*** Hora: %s                                                               ***\n", comanda->hora);
-        printf("*** Mesa: %s                                                          ***\n", comanda->mesa);  // Corrigido para %s
-        printf("*** Garcom: %s                                                               ***\n", comanda->idgarcom);
-        printf("*** Valor: %s                                                               ***\n", comanda->valor);
-        printf("*** status: %d                                                              ***\n", comanda->status);
-        printf("***                                                                         ***\n");
-        printf("*******************************************************************************\n");
+        printf("\n");
+        printf("|===========================================================================|\n");
+        printf("***                                                                          \n");
+        printf("*** ID: %s                                                                   \n", comanda->idcomanda);
+        printf("*** Data: %s                                                                 \n", comanda->data);
+        printf("*** Hora: %s                                                                 \n", comanda->hora);
+        printf("*** Mesa: %s                                                                 \n", comanda->mesa);
+        printf("*** Garcom: %s                                                               \n", comanda->idgarcom);
+        printf("*** Valor: %s                                                                \n", comanda->valor);
+        printf("***                                                                          \n");
+        printf("|===========================================================================|\n");
         }
     }
     free(comanda);
@@ -111,6 +117,8 @@ void C_inativos(void) {
     FILE* fp;
     fp = fopen("comanda.dat", "rb");
 
+    system("clear || cls"); // se for Linux use 'clear' se for Windows use 'cls'
+    printf("\n");
     printf("*******************************************************************************\n");
     printf("***                                                                         ***\n");
     printf("***             - - - - Relatório de Comandas Inativas  - - - -             ***\n");
@@ -119,22 +127,23 @@ void C_inativos(void) {
 
     while(fread(comanda, sizeof(Comanda), 1, fp)) { 
         if( comanda->status == 'i'){
-        printf("*******************************************************************************\n");
-        printf("***                                                                         ***\n");
-        printf("*** ID: %s                                                                  ***\n", comanda->idcomanda);  // Corrigido para %s
-        printf("*** Data: %s                                                                ***\n", comanda->data);
-        printf("*** Hora: %s                                                               ***\n", comanda->hora);
-        printf("*** Mesa: %s                                                          ***\n", comanda->mesa);  // Corrigido para %s
-        printf("*** Garcom: %s                                                               ***\n", comanda->idgarcom);
-        printf("*** Valor: %s                                                               ***\n", comanda->valor);
-        printf("*** status: %d                                                              ***\n", comanda->status);
-        printf("***                                                                         ***\n");
-        printf("*******************************************************************************\n");
+        printf("\n");
+        printf("|===========================================================================|\n");
+        printf("***                                                                          \n");
+        printf("*** ID: %s                                                                   \n", comanda->idcomanda);
+        printf("*** Data: %s                                                                 \n", comanda->data);
+        printf("*** Hora: %s                                                                 \n", comanda->hora);
+        printf("*** Mesa: %s                                                                 \n", comanda->mesa);
+        printf("*** Garcom: %s                                                               \n", comanda->idgarcom);
+        printf("*** Valor: %s                                                                \n", comanda->valor);
+        printf("***                                                                          \n");
+        printf("|===========================================================================|\n");
         }
     }
     free(comanda);
     fclose(fp);
 
+    printf("*** Relatório de Comandas Inativa (SEM INATIVOS NO MOMENTO) ***\n");
     printf("\n>>> Tecle <ENTER> para continuar...\n");
     getchar();
 }
