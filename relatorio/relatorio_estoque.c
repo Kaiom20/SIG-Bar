@@ -20,14 +20,17 @@ void relatorio_estoque(void) {
 }
 
 char menu_relatorio_estoque(void) {
+    system("clear || cls"); // se for Linux use 'clear' se for Windows use 'cls'
+    printf("\n");
     char op;
-    printf("*******************************************************************************\n");
-    printf("***                - - - - Menu Relatorio Estoque- - - -                    ***\n");
-    printf("***         1 - Relatorio Geral                                             ***\n");
-    printf("***         2 - Ativos                                                      ***\n");
-    printf("***         3 - Inativos                                                    ***\n");
-    printf("***         0 - Sair                                                        ***\n");
-    printf("*******************************************************************************\n");
+    printf("|===========================================================================|\n");
+    printf("|                - - - - Menu Relatorio Estoque- - - -                      |\n");
+    printf("|                                                                           |\n");
+    printf("|                          1 - Relatorio Geral                              |\n");
+    printf("|                          2 - Ativos                                       |\n");
+    printf("|                          3 - Inativos                                     |\n");
+    printf("|                          0 - Sair                                         |\n");
+    printf("|===========================================================================|\n");
     scanf("%c", &op);
     getchar();
     return op;
@@ -40,23 +43,25 @@ void E_geral(void) {
     FILE* fp;
     fp = fopen("estoque.dat", "rb");
 
-    printf("*******************************************************************************\n");
-    printf("***                                                                         ***\n");
-    printf("***              - - - - Relatório Geral de Estoque - - - -                 ***\n");
-    printf("***                                                                         ***\n");
-    printf("*******************************************************************************\n");
+    system("clear || cls"); // se for Linux use 'clear' se for Windows use 'cls'
+    printf("\n");
+    printf("|===========================================================================|\n");
+    printf("***                                                                        ***\n");
+    printf("***              - - - - Relatório Geral de Estoque - - - -                ***\n");
+    printf("***                                                                        ***\n");
+    printf("|===========================================================================|\n");
 
     while(fread(estoque, sizeof(Estoque), 1, fp)) { 
-        printf("*******************************************************************************\n");
-        printf("***                                                                         ***\n");
-        printf("*** ID: %s                                                                  ***\n", estoque->idprod);  // Corrigido para %s
-        printf("*** Nome: %s                                                                ***\n", estoque->nome);
-        printf("*** Valid: %s                                                               ***\n", estoque->valid);
-        printf("*** Quantidade: %s                                                          ***\n", estoque->quant);  // Corrigido para %s
-        printf("*** Valor: %s                                                               ***\n", estoque->valor);
-        printf("*** status: %d                                                              ***\n", estoque->status);
-        printf("***                                                                         ***\n");
-        printf("*******************************************************************************\n");
+        printf("\n");
+        printf("|===========================================================================|\n");
+        printf("***                                                                         \n");
+        printf("*** ID: %s                                                                  \n", estoque->idprod);  
+        printf("*** Nome: %s                                                                \n", estoque->nome);
+        printf("*** Valid: %s                                                               \n", estoque->valid);
+        printf("*** Quantidade: %s                                                          \n", estoque->quant);  
+        printf("*** Valor: %s                                                               \n", estoque->valor);
+        printf("***                                                                         \n");
+        printf("|===========================================================================|\n");
     }
     free(estoque);
     fclose(fp);
@@ -73,24 +78,26 @@ void E_ativos(void) {
     FILE* fp;
     fp = fopen("estoque.dat", "rb");
 
-    printf("*******************************************************************************\n");
-    printf("***                                                                         ***\n");
-    printf("***              - - - - Relatório Geral de Estoque - - - -                 ***\n");
-    printf("***                                                                         ***\n");
-    printf("*******************************************************************************\n");
+    system("clear || cls"); // se for Linux use 'clear' se for Windows use 'cls'
+    printf("\n");
+    printf("|===========================================================================|\n");
+    printf("***                                                                        ***\n");
+    printf("***              - - - - Relatório Geral de Estoque - - - -                ***\n");
+    printf("***                                                                        ***\n");
+    printf("|===========================================================================|\n");
 
     while(fread(estoque, sizeof(Estoque), 1, fp)) { 
         if(estoque->status == 'a') {
-        printf("*******************************************************************************\n");
-        printf("***                                                                         ***\n");
-        printf("*** ID: %s                                                                  ***\n", estoque->idprod);  // Corrigido para %s
-        printf("*** Nome: %s                                                                ***\n", estoque->nome);
-        printf("*** Valid: %s                                                               ***\n", estoque->valid);
-        printf("*** Quantidade: %s                                                          ***\n", estoque->quant);  // Corrigido para %s
-        printf("*** Valor: %s                                                               ***\n", estoque->valor);
-        printf("*** status: %d                                                              ***\n", estoque->status);
-        printf("***                                                                         ***\n");
-        printf("*******************************************************************************\n");
+        printf("\n");
+        printf("|===========================================================================|\n");
+        printf("***                                                                         \n");
+        printf("*** ID: %s                                                                  \n", estoque->idprod);  
+        printf("*** Nome: %s                                                                \n", estoque->nome);
+        printf("*** Valid: %s                                                               \n", estoque->valid);
+        printf("*** Quantidade: %s                                                          \n", estoque->quant);  
+        printf("*** Valor: %s                                                               \n", estoque->valor);
+        printf("***                                                                         \n");
+        printf("|===========================================================================|\n");
         }
     }
     free(estoque);
@@ -108,30 +115,30 @@ void E_inativos(void) {
     FILE* fp;
     fp = fopen("estoque.dat", "rb");
 
-    printf("*******************************************************************************\n");
-    printf("***                                                                         ***\n");
-    printf("***              - - - - Relatório Geral de Estoque - - - -                 ***\n");
-    printf("***                                                                         ***\n");
-    printf("*******************************************************************************\n");
+    printf("|===========================================================================|\n");
+    printf("***                                                                        ***\n");
+    printf("***              - - - - Relatório Geral de Estoque - - - -                ***\n");
+    printf("***                                                                        ***\n");
+    printf("|===========================================================================|\n");
 
     while(fread(estoque, sizeof(Estoque), 1, fp)) { 
         if(estoque->status == 'i') {
-        printf("*******************************************************************************\n");
-        printf("***                                                                         ***\n");
-        printf("*** ID: %s                                                                  ***\n", estoque->idprod);  // Corrigido para %s
-        printf("*** Nome: %s                                                                ***\n", estoque->nome);
-        printf("*** Valid: %s                                                               ***\n", estoque->valid);
-        printf("*** Quantidade: %s                                                          ***\n", estoque->quant);  // Corrigido para %s
-        printf("*** Valor: %s                                                               ***\n", estoque->valor);
-        printf("*** status: %d                                                              ***\n", estoque->status);
-        printf("***                                                                         ***\n");
-        printf("*******************************************************************************\n");
+        printf("\n");
+        printf("|===========================================================================|\n");
+        printf("***                                                                         \n");
+        printf("*** ID: %s                                                                  \n", estoque->idprod);  
+        printf("*** Nome: %s                                                                \n", estoque->nome);
+        printf("*** Valid: %s                                                               \n", estoque->valid);
+        printf("*** Quantidade: %s                                                          \n", estoque->quant);  
+        printf("*** Valor: %s                                                               \n", estoque->valor);
+        printf("***                                                                         \n");
+        printf("|===========================================================================|\n");
         }
     }
     free(estoque);
     fclose(fp);
 
 
-    printf("*** Relatório de Estoque Inativo ***\n");
+    printf("*** Relatório de Estoque Inativo (SEM INATIVOS NO MOMENTO) ***\n");
     getchar();
 }
