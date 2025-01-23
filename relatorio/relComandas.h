@@ -3,10 +3,10 @@
 #ifndef RELCOMANDAS
 #define RELCOMANDAS
 
-void modulo_relComandas(void);
-char menu_relComandas(void);
-void relComandas_geral(void);
-void relComandas_ativas(void);
-void relComandas_inativas(void);
+void relatorio_comanda(void);
+char menu_relatorio_comanda(void);
+void C_geral(void);
+void C_ativos(void);
+void C_inativos(void);
 
 #endif
